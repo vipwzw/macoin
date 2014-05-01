@@ -1092,16 +1092,17 @@ void static PruneOrphanBlocks()
 
 int64_t GetBlockValue(int nHeight, int64_t nFees)
 {
-    int64_t nSubsidy = 50 * COIN;
+    int64_t nSubsidy = 1 * COIN;
 
+    if (nHeight == 1)
+        return 765546949 * COIN;
     // Subsidy is cut in half every 210,000 blocks which will occur approximately every 4 years.
-    nSubsidy >>= (nHeight / Params().SubsidyHalvingInterval());
 
     return nSubsidy + nFees;
 }
 
-static const int64_t nTargetTimespan = 14 * 24 * 60 * 60; // two weeks
-static const int64_t nTargetSpacing = 10 * 60;
+static const int64_t nTargetTimespan = 24 * 60 * 60; //难度一天调整一次
+static const int64_t nTargetSpacing = 60; //60秒，一分钟调整一次
 static const int64_t nInterval = nTargetTimespan / nTargetSpacing;
 
 //

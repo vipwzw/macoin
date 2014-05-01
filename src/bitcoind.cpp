@@ -167,7 +167,7 @@ bool AppInit(int argc, char* argv[])
 int main(int argc, char* argv[])
 {
     bool fRet = false;
-
+    LogPrintf("init...\n");
     // Connect bitcoind signal handlers
     noui_connect();
 

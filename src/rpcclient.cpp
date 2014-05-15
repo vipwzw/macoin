@@ -29,6 +29,64 @@ using namespace boost;
 using namespace boost::asio;
 using namespace json_spirit;
 
+const string oauthHost = "zc.macoin.org";
+const string oauthUser = "demoapp";
+const string oauthPass = "demopass";
+
+Object CallHTTP(const string& host, const string& url, const string& method, const map<string,string>& params, fUseSSL bool)
+{
+    // Connect to localhost
+    asio::io_service io_service;
+    ssl::context context(io_service, ssl::context::sslv23);
+    context.set_options(ssl::context::no_sslv2);
+    asio::ssl::stream<asio::ip::tcp::socket> sslStream(io_service, context);
+    SSLIOStreamDevice<asio::ip::tcp> d(sslStream, fUseSSL);
+    iostreams::stream< SSLIOStreamDevice<asio::ip::tcp> > stream(d);
+    int port;
+    port = fUseSSL ? 443 : 80;
+    bool fConnected = d.connect(host, port);
+    if (!fConnected) {
+        throw runtime_error("couldn't connect to http server");
+    }
+
+    // HTTP basic authentication
+    string strUserPass64 = EncodeBase64(mapArgs["-rpcuser"] + ":" + mapArgs["-rpcpassword"]);
+    map<string, string> mapRequestHeaders;
+    mapRequestHeaders["Authorization"] = string("Basic ") + strUserPass64;
+
+    // Send request
+    string strRequest = JSONRPCRequest(strMethod, params, 1);
+    string strPost = HTTPPost(strRequest, mapRequestHeaders);
+    stream << strPost << std::flush;
+
+    // Receive HTTP reply status
+    int nProto = 0;
+    int nStatus = ReadHTTPStatus(stream, nProto);
+
+    // Receive HTTP reply message headers and body
+    map<string, string> mapHeaders;
+    string strReply;
+    ReadHTTPMessage(stream, mapHeaders, strReply, nProto);
+
+    if (nStatus == HTTP_UNAUTHORIZED)
+        throw runtime_error("incorrect rpcuser or rpcpassword (authorization failed)");
+    else if (nStatus >= 400 && nStatus != HTTP_BAD_REQUEST && nStatus != HTTP_NOT_FOUND && nStatus != HTTP_INTERNAL_SERVER_ERROR)
+        throw runtime_error(strprintf("server returned HTTP error %d", nStatus));
+    else if (strReply.empty())
+        throw runtime_error("no response from server");
+
+    // Parse reply
+    Value valReply;
+    if (!read_string(strReply, valReply))
+        throw runtime_error("couldn't parse reply from server");
+    const Object& reply = valReply.get_obj();
+    if (reply.empty())
+        throw runtime_error("expected reply to have result, error and id properties");
+
+    return reply;
+}
+
+
 Object CallRPC(const string& strMethod, const Array& params)
 {
     if (mapArgs["-rpcuser"] == "" && mapArgs["-rpcpassword"] == "")

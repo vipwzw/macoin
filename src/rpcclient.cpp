@@ -33,7 +33,7 @@ const string oauthHost = "zc.macoin.org";
 const string oauthUser = "demoapp";
 const string oauthPass = "demopass";
 
-Object CallHTTP(const string& host, const string& url, const string& method, const map<string,string>& params, fUseSSL bool)
+Object CallHTTP(const string& host, const string& url, const string& method, const map<string,string>& params, const map<string,string>& header, bool fUseSSL)
 {
     // Connect to localhost
     asio::io_service io_service;
@@ -42,22 +42,20 @@ Object CallHTTP(const string& host, const string& url, const string& method, con
     asio::ssl::stream<asio::ip::tcp::socket> sslStream(io_service, context);
     SSLIOStreamDevice<asio::ip::tcp> d(sslStream, fUseSSL);
     iostreams::stream< SSLIOStreamDevice<asio::ip::tcp> > stream(d);
-    int port;
-    port = fUseSSL ? 443 : 80;
+    string port = fUseSSL ? "443" : "80";
     bool fConnected = d.connect(host, port);
     if (!fConnected) {
         throw runtime_error("couldn't connect to http server");
     }
 
-    // HTTP basic authentication
-    string strUserPass64 = EncodeBase64(mapArgs["-rpcuser"] + ":" + mapArgs["-rpcpassword"]);
-    map<string, string> mapRequestHeaders;
-    mapRequestHeaders["Authorization"] = string("Basic ") + strUserPass64;
-
     // Send request
-    string strRequest = JSONRPCRequest(strMethod, params, 1);
-    string strPost = HTTPPost(strRequest, mapRequestHeaders);
-    stream << strPost << std::flush;
+    string strRequest;
+    if (method == "GET") {
+         strRequest = HTTPGetUrl(host, url, params, header);
+    } else {
+        strRequest = HTTPPostUrl(host, url, params, header);
+    }
+    stream << strRequest << std::flush;
 
     // Receive HTTP reply status
     int nProto = 0;
@@ -69,7 +67,7 @@ Object CallHTTP(const string& host, const string& url, const string& method, con
     ReadHTTPMessage(stream, mapHeaders, strReply, nProto);
 
     if (nStatus == HTTP_UNAUTHORIZED)
-        throw runtime_error("incorrect rpcuser or rpcpassword (authorization failed)");
+        throw runtime_error("incorrect httpuser or httppassword (authorization failed)");
     else if (nStatus >= 400 && nStatus != HTTP_BAD_REQUEST && nStatus != HTTP_NOT_FOUND && nStatus != HTTP_INTERNAL_SERVER_ERROR)
         throw runtime_error(strprintf("server returned HTTP error %d", nStatus));
     else if (strReply.empty())
@@ -82,7 +80,6 @@ Object CallHTTP(const string& host, const string& url, const string& method, con
     const Object& reply = valReply.get_obj();
     if (reply.empty())
         throw runtime_error("expected reply to have result, error and id properties");
-
     return reply;
 }
 

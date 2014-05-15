@@ -116,7 +116,7 @@ string HTTPPostUrl(const string& host, const string& url, const map<string,strin
     return s.str();
 }
 
-string HTTPPGetUrl(const string& host, const string& url, const map<string,string>& params, const map<string,string>& mapRequestHeaders)
+string HTTPGetUrl(const string& host, const string& url, const map<string,string>& params, const map<string,string>& mapRequestHeaders)
 {
     ostringstream sp;
     sp << url << "?";
@@ -131,6 +131,7 @@ string HTTPPGetUrl(const string& host, const string& url, const map<string,strin
       << "Accept: application/json\r\n";
     BOOST_FOREACH(const PAIRTYPE(string, string)& item, mapRequestHeaders)
         s << item.first << ": " << item.second << "\r\n";
+    s << "\r\n";
     return s.str();
 }
 

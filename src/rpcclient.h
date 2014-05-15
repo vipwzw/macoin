@@ -12,6 +12,8 @@
 
 int CommandLineRPC(int argc, char *argv[]);
 
+json_spirit::Object CallHTTP(const std::string& host, const std::string& url, const std::string& method, const std::map<std::string, std::string>& params, const std::map<std::string, std::string>& header, bool fUseSSL);
+
 json_spirit::Array RPCConvertValues(const std::string &strMethod, const std::vector<std::string> &strParams);
 
 /** Show help message for bitcoin-cli.

@@ -110,6 +110,20 @@ BOOST_AUTO_TEST_CASE(http_get)
     BOOST_CHECK(find_value(r,  "error").get_str() == "error token");
 }
 
+BOOST_AUTO_TEST_CASE(api_addmultisigaddress)
+{
+    OAuth2::login("cykzl@vip.qq.com", "182764125");
+    Value addrvalue = CallRPC("getnewaddress");
+    BOOST_CHECK(addrvalue.type() == str_type);
+    string addr = addrvalue.get_str();
+    cout << "getnewaddress:" << addr << endl;
+    const Object addrinfo = CallRPC(string("validateaddress ") + addr).get_obj();
+    const string pubkey = find_value(addrinfo, "pubkey").get_str();
+    const Object multiinfo = Macoin::addmultisigaddress(pubkey);
+    BOOST_CHECK(find_value(multiinfo,  "error").type() == null_type);
+}
+
+
 BOOST_AUTO_TEST_CASE(rpc_format_monetary_values)
 {
     BOOST_CHECK(write_string(ValueFromAmount(0LL), false) == "0.00000000");

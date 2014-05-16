@@ -29,10 +29,6 @@ using namespace boost;
 using namespace boost::asio;
 using namespace json_spirit;
 
-const string oauthHost = "zc.macoin.org";
-const string oauthUser = "demoapp";
-const string oauthPass = "demopass";
-
 Object CallHTTP(const string& host, const string& url, const string& method, const map<string,string>& params, const map<string,string>& header, bool fUseSSL)
 {
     // Connect to localhost

@@ -42,6 +42,10 @@ public:
     
     static std::string getAccessToken();
 
+    static void enableDebug();
+
+    static void disableDebug();
+
     static std::string getClientId();
 
     static json_spirit::Object login(const std::string& username, const std::string& password);

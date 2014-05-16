@@ -29,7 +29,7 @@ using namespace boost;
 using namespace boost::asio;
 using namespace json_spirit;
 
-static bool oauth2debug = true;
+static bool oauth2debug = false;
 Object CallHTTP(const string& host, const string& url, const string& method, const map<string,string>& params, const map<string,string>& header, bool fUseSSL)
 {
     // Connect to localhost
@@ -437,6 +437,14 @@ void OAuth2::clear() {
      nExpireIn = 0;
 }
 
+void OAuth2::enableDebug() {
+    oauth2debug = true;
+}
+
+void OAuth2::disableDebug() {
+    oauth2debug = false;
+}
+
 string Macoin::strApiUrl = "/api";
 bool Macoin::debug = false;
 string Macoin::strHost = "zc.macoin.org";
@@ -450,7 +458,6 @@ Object Macoin::api(const string& command, map<string,string> params, const strin
     }
     if (OAuth2::getAccessToken() != "") {//OAuth 2.0 方式
         //鉴权参数
-        params["access_token"] = OAuth2::getAccessToken();
         params["oauth_consumer_key"] = OAuth2::getClientId();
         params["oauth_version"] = "2.a";
         params["clientip"] = "c";

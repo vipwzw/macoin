@@ -119,8 +119,8 @@ Qt GUI
 * Much better translations
 * Override progress bar design on platforms with segmented progress bars to assist with readability
 * Added 'immature balance' display on the overview page
-* (Windows only): enable ASLR and DEP for bitcoin-qt.exe
-* (Windows only): add meta-data to bitcoin-qt.exe (e.g. description)
+* (Windows only): enable ASLR and DEP for macoin-qt.exe
+* (Windows only): add meta-data to macoin-qt.exe (e.g. description)
 
 Internal codebase
 

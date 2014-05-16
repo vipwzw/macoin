@@ -3,12 +3,12 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Bitcoin Core</source>
+        <source>About Macoin Core</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Bitcoin Core&lt;/b&gt; version</source>
+        <source>&lt;b&gt;Macoin Core&lt;/b&gt; version</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -34,7 +34,7 @@ Tämä ohjelma sisältää OpenSSL projektin OpenSSL työkalupakin (http://www.o
     </message>
     <message>
         <location line="+0"/>
-        <source>The Bitcoin Core developers</source>
+        <source>The Macoin Core developers</source>
         <translation type="unfinished"/>
     </message>
 </context>
@@ -122,12 +122,12 @@ Tämä ohjelma sisältää OpenSSL projektin OpenSSL työkalupakin (http://www.o
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Macoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+4"/>
-        <source>These are your Bitcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your Macoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -248,7 +248,7 @@ Tämä ohjelma sisältää OpenSSL projektin OpenSSL työkalupakin (http://www.o
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MACOINS&lt;/b&gt;!</source>
         <translation>Varoitus: Jos salaat lompakkosi ja menetät tunnuslauseesi, &lt;b&gt;MENETÄT KAIKKI BITCOINISI&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -275,8 +275,8 @@ Tämä ohjelma sisältää OpenSSL projektin OpenSSL työkalupakin (http://www.o
     </message>
     <message>
         <location line="-56"/>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin sulkeutuu lopettaakseen salausprosessin. Muista, että salattukaan lompakko ei täysin suojaa sitä haittaohjelmien aiheuttamilta varkauksilta.</translation>
+        <source>Macoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your macoins from being stolen by malware infecting your computer.</source>
+        <translation>Macoin sulkeutuu lopettaakseen salausprosessin. Muista, että salattukaan lompakko ei täysin suojaa sitä haittaohjelmien aiheuttamilta varkauksilta.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -369,8 +369,8 @@ Tämä ohjelma sisältää OpenSSL projektin OpenSSL työkalupakin (http://www.o
     </message>
     <message>
         <location line="+7"/>
-        <source>Show information about Bitcoin</source>
-        <translation>Näytä tietoa Bitcoin-projektista</translation>
+        <source>Show information about Macoin</source>
+        <translation>Näytä tietoa Macoin-projektista</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -430,12 +430,12 @@ Tämä ohjelma sisältää OpenSSL projektin OpenSSL työkalupakin (http://www.o
     </message>
     <message>
         <location line="-405"/>
-        <source>Send coins to a Bitcoin address</source>
-        <translation>Lähetä kolikoita Bitcoin-osoitteeseen</translation>
+        <source>Send coins to a Macoin address</source>
+        <translation>Lähetä kolikoita Macoin-osoitteeseen</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for Bitcoin</source>
+        <source>Modify configuration options for Macoin</source>
         <translation>Muuta Bitcoinin konfiguraatioasetuksia</translation>
     </message>
     <message>
@@ -465,8 +465,8 @@ Tämä ohjelma sisältää OpenSSL projektin OpenSSL työkalupakin (http://www.o
     </message>
     <message>
         <location line="+430"/>
-        <source>Bitcoin</source>
-        <translation>Bitcoin</translation>
+        <source>Macoin</source>
+        <translation>Macoin</translation>
     </message>
     <message>
         <location line="-643"/>
@@ -492,7 +492,7 @@ Tämä ohjelma sisältää OpenSSL projektin OpenSSL työkalupakin (http://www.o
     <message>
         <location line="+1"/>
         <source>Show or hide the main Window</source>
-        <translation>Näytä tai piilota Bitcoin-ikkuna</translation>
+        <translation>Näytä tai piilota Macoin-ikkuna</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -501,13 +501,13 @@ Tämä ohjelma sisältää OpenSSL projektin OpenSSL työkalupakin (http://www.o
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
-        <translation>Allekirjoita viestisi omalla Bitcoin -osoitteellasi todistaaksesi, että omistat ne</translation>
+        <source>Sign messages with your Macoin addresses to prove you own them</source>
+        <translation>Allekirjoita viestisi omalla Macoin -osoitteellasi todistaaksesi, että omistat ne</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
-        <translation>Varmista, että viestisi on allekirjoitettu määritetyllä Bitcoin -osoitteella</translation>
+        <source>Verify messages to ensure they were signed with specified Macoin addresses</source>
+        <translation>Varmista, että viestisi on allekirjoitettu määritetyllä Macoin -osoitteella</translation>
     </message>
     <message>
         <location line="+48"/>
@@ -537,18 +537,18 @@ Tämä ohjelma sisältää OpenSSL projektin OpenSSL työkalupakin (http://www.o
     </message>
     <message>
         <location line="-401"/>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin-ydin</translation>
+        <source>Macoin Core</source>
+        <translation>Macoin-ydin</translation>
     </message>
     <message>
         <location line="+163"/>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <source>Request payments (generates QR codes and macoin: URIs)</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+29"/>
         <location line="+2"/>
-        <source>&amp;About Bitcoin Core</source>
+        <source>&amp;About Macoin Core</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -563,7 +563,7 @@ Tämä ohjelma sisältää OpenSSL projektin OpenSSL työkalupakin (http://www.o
     </message>
     <message>
         <location line="+3"/>
-        <source>Open a bitcoin: URI or payment request</source>
+        <source>Open a macoin: URI or payment request</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -573,19 +573,19 @@ Tämä ohjelma sisältää OpenSSL projektin OpenSSL työkalupakin (http://www.o
     </message>
     <message>
         <location line="+1"/>
-        <source>Show the Bitcoin Core help message to get a list with possible Bitcoin command-line options</source>
+        <source>Show the Macoin Core help message to get a list with possible Macoin command-line options</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+159"/>
         <location line="+5"/>
-        <source>Bitcoin client</source>
-        <translation>Bitcoin-asiakas</translation>
+        <source>Macoin client</source>
+        <translation>Macoin-asiakas</translation>
     </message>
     <message numerus="yes">
         <location line="+142"/>
-        <source>%n active connection(s) to Bitcoin network</source>
-        <translation><numerusform>%n aktiivinen yhteys Bitcoin-verkkoon</numerusform><numerusform>%n aktiivista yhteyttä Bitcoin-verkkoon</numerusform></translation>
+        <source>%n active connection(s) to Macoin network</source>
+        <translation><numerusform>%n aktiivinen yhteys Macoin-verkkoon</numerusform><numerusform>%n aktiivista yhteyttä Macoin-verkkoon</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -691,8 +691,8 @@ Osoite: %4</translation>
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+438"/>
-        <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
-        <translation>Peruuttamaton virhe on tapahtunut. Bitcoin ei voi enää jatkaa turvallisesti ja sammutetaan.</translation>
+        <source>A fatal error occurred. Macoin can no longer continue safely and will quit.</source>
+        <translation>Peruuttamaton virhe on tapahtunut. Macoin ei voi enää jatkaa turvallisesti ja sammutetaan.</translation>
     </message>
 </context>
 <context>
@@ -1049,8 +1049,8 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Bitcoin address.</source>
-        <translation>Antamasi osoite &quot;%1&quot; ei ole validi Bitcoin-osoite.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Macoin address.</source>
+        <translation>Antamasi osoite &quot;%1&quot; ei ole validi Macoin-osoite.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1095,13 +1095,13 @@ Osoite: %4</translation>
     <name>HelpMessageDialog</name>
     <message>
         <location filename="../forms/helpmessagedialog.ui" line="+19"/>
-        <source>Bitcoin Core - Command-line options</source>
+        <source>Macoin Core - Command-line options</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../utilitydialog.cpp" line="+38"/>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin-ydin</translation>
+        <source>Macoin Core</source>
+        <translation>Macoin-ydin</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -1153,17 +1153,17 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Welcome to Bitcoin Core.</source>
+        <source>Welcome to Macoin Core.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+26"/>
-        <source>As this is the first time the program is launched, you can choose where Bitcoin Core will store its data.</source>
+        <source>As this is the first time the program is launched, you can choose where Macoin Core will store its data.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+10"/>
-        <source>Bitcoin Core will download and store a copy of the Bitcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <source>Macoin Core will download and store a copy of the Macoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1178,8 +1178,8 @@ Osoite: %4</translation>
     </message>
     <message>
         <location filename="../intro.cpp" line="+85"/>
-        <source>Bitcoin</source>
-        <translation>Bitcoin</translation>
+        <source>Macoin</source>
+        <translation>Macoin</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1254,13 +1254,13 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Bitcoin after logging in to the system.</source>
-        <translation>Käynnistä Bitcoin kirjautumisen yhteydessä.</translation>
+        <source>Automatically start Macoin after logging in to the system.</source>
+        <translation>Käynnistä Macoin kirjautumisen yhteydessä.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Bitcoin on system login</source>
-        <translation>&amp;Käynnistä Bitcoin kirjautumisen yhteydessä</translation>
+        <source>&amp;Start Macoin on system login</source>
+        <translation>&amp;Käynnistä Macoin kirjautumisen yhteydessä</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1289,7 +1289,7 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="+58"/>
-        <source>Connect to the Bitcoin network through a SOCKS proxy.</source>
+        <source>Connect to the Macoin network through a SOCKS proxy.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1324,8 +1324,8 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Avaa Bitcoin-asiakasohjelman portti reitittimellä automaattisesti. Tämä toimii vain, jos reitittimesi tukee UPnP:tä ja se on käytössä.</translation>
+        <source>Automatically open the Macoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Avaa Macoin-asiakasohjelman portti reitittimellä automaattisesti. Tämä toimii vain, jos reitittimesi tukee UPnP:tä ja se on käytössä.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1375,7 +1375,7 @@ Osoite: %4</translation>
     <message>
         <location line="+7"/>
         <source>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Quit in the menu.</source>
-        <translation>Ikkunaa suljettaessa vain pienentää Bitcoin-ohjelman ikkunan lopettamatta itse ohjelmaa. Kun tämä asetus on valittuna, ohjelman voi sulkea vain valitsemalla Lopeta ohjelman valikosta.</translation>
+        <translation>Ikkunaa suljettaessa vain pienentää Macoin-ohjelman ikkunan lopettamatta itse ohjelmaa. Kun tämä asetus on valittuna, ohjelman voi sulkea vain valitsemalla Lopeta ohjelman valikosta.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1394,23 +1394,23 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Bitcoin.</source>
-        <translation>Tässä voit määritellä käyttöliittymän kielen. Muutokset astuvat voimaan seuraavan kerran, kun Bitcoin käynnistetään.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Macoin.</source>
+        <translation>Tässä voit määritellä käyttöliittymän kielen. Muutokset astuvat voimaan seuraavan kerran, kun Macoin käynnistetään.</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>&amp;Unit to show amounts in:</source>
-        <translation>Yksikkö jona bitcoin-määrät näytetään</translation>
+        <translation>Yksikkö jona macoin-määrät näytetään</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Valitse mitä yksikköä käytetään ensisijaisesti bitcoin-määrien näyttämiseen.</translation>
+        <translation>Valitse mitä yksikköä käytetään ensisijaisesti macoin-määrien näyttämiseen.</translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show Bitcoin addresses in the transaction list or not.</source>
-        <translation>Näytetäänkö Bitcoin-osoitteet rahansiirrot listassa vai ei.</translation>
+        <source>Whether to show Macoin addresses in the transaction list or not.</source>
+        <translation>Näytetäänkö Macoin-osoitteet rahansiirrot listassa vai ei.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1484,8 +1484,8 @@ Osoite: %4</translation>
     <message>
         <location line="+50"/>
         <location line="+231"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Näytetyt tiedot eivät välttämättä ole ajantasalla. Lompakkosi synkronoituu Bitcoin-verkon kanssa automaattisesti yhteyden muodostamisen jälkeen, mutta synkronointi on vielä meneillään.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Macoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Näytetyt tiedot eivät välttämättä ole ajantasalla. Lompakkosi synkronoituu Macoin-verkon kanssa automaattisesti yhteyden muodostamisen jälkeen, mutta synkronointi on vielä meneillään.</translation>
     </message>
     <message>
         <location line="-155"/>
@@ -1554,8 +1554,8 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>URI can not be parsed! This can be caused by an invalid Bitcoin address or malformed URI parameters.</source>
-        <translation>URIa ei voitu jäsentää! Tämä voi johtua kelvottomasta Bitcoin-osoitteesta tai virheellisistä URI parametreista.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Macoin address or malformed URI parameters.</source>
+        <translation>URIa ei voitu jäsentää! Tämä voi johtua kelvottomasta Macoin-osoitteesta tai virheellisistä URI parametreista.</translation>
     </message>
     <message>
         <location line="+96"/>
@@ -1574,7 +1574,7 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="-353"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
+        <source>Cannot start macoin: click-to-pay handler</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1643,8 +1643,8 @@ Osoite: %4</translation>
     <message>
         <location filename="../bitcoin.cpp" line="+71"/>
         <location line="+11"/>
-        <source>Bitcoin</source>
-        <translation>Bitcoin</translation>
+        <source>Macoin</source>
+        <translation>Macoin</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1814,7 +1814,7 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Bitcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the Macoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation>Avaa lokitiedosto nykyisestä data-kansiosta. Tämä voi viedä useamman sekunnin, jos lokitiedosto on iso.</translation>
     </message>
     <message>
@@ -1824,8 +1824,8 @@ Osoite: %4</translation>
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the Bitcoin RPC console.</source>
-        <translation>Tervetuloa Bitcoin RPC konsoliin.</translation>
+        <source>Welcome to the Macoin RPC console.</source>
+        <translation>Tervetuloa Macoin RPC konsoliin.</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1907,7 +1907,7 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="+7"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Bitcoin network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Macoin network.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2191,8 +2191,8 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="-136"/>
-        <source>Enter a Bitcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Anna Bitcoin-osoite (esim. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a Macoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation>Anna Macoin-osoite (esim. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -2281,7 +2281,7 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="+112"/>
-        <source>Warning: Invalid Bitcoin address</source>
+        <source>Warning: Invalid Macoin address</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2383,7 +2383,7 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>A message that was attached to the Bitcoin URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <source>A message that was attached to the Macoin URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Macoin network.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2415,15 +2415,15 @@ Osoite: %4</translation>
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Bitcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Anna Bitcoin-osoite (esim. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a Macoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation>Anna Macoin-osoite (esim. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
 </context>
 <context>
     <name>ShutdownWindow</name>
     <message>
         <location filename="../utilitydialog.cpp" line="+48"/>
-        <source>Bitcoin Core is shutting down...</source>
+        <source>Macoin Core is shutting down...</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2493,8 +2493,8 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Bitcoin address</source>
-        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän Bitcoin-osoitteen</translation>
+        <source>Sign the message to prove you own this Macoin address</source>
+        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän Macoin-osoitteen</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2529,8 +2529,8 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Bitcoin address</source>
-        <translation>Tarkista viestin allekirjoitus varmistaaksesi, että se allekirjoitettiin tietyllä Bitcoin-osoitteella</translation>
+        <source>Verify the message to ensure it was signed with the specified Macoin address</source>
+        <translation>Tarkista viestin allekirjoitus varmistaaksesi, että se allekirjoitettiin tietyllä Macoin-osoitteella</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2545,8 +2545,8 @@ Osoite: %4</translation>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+29"/>
         <location line="+3"/>
-        <source>Enter a Bitcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Anna Bitcoin-osoite (esim. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a Macoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation>Anna Macoin-osoite (esim. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2555,8 +2555,8 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Bitcoin signature</source>
-        <translation>Syötä Bitcoin-allekirjoitus</translation>
+        <source>Enter Macoin signature</source>
+        <translation>Syötä Macoin-allekirjoitus</translation>
     </message>
     <message>
         <location line="+84"/>
@@ -2629,12 +2629,12 @@ Osoite: %4</translation>
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+28"/>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin-ydin</translation>
+        <source>Macoin Core</source>
+        <translation>Macoin-ydin</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>The Bitcoin Core developers</source>
+        <source>The Macoin Core developers</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2955,7 +2955,7 @@ Osoite: %4</translation>
     <message>
         <location line="+2"/>
         <source>Destination address of transaction.</source>
-        <translation>Rahansiirron kohteen Bitcoin-osoite</translation>
+        <translation>Rahansiirron kohteen Macoin-osoite</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3202,7 +3202,7 @@ Osoite: %4</translation>
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>macoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+221"/>
         <source>Usage:</source>
@@ -3225,13 +3225,13 @@ Osoite: %4</translation>
     </message>
     <message>
         <location line="+22"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Määritä asetustiedosto (oletus: bitcoin.conf)</translation>
+        <source>Specify configuration file (default: macoin.conf)</source>
+        <translation>Määritä asetustiedosto (oletus: macoin.conf)</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Määritä pid-tiedosto (oletus: bitcoin.pid)</translation>
+        <source>Specify pid file (default: macoind.pid)</source>
+        <translation>Määritä pid-tiedosto (oletus: macoin.pid)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -3314,7 +3314,7 @@ rpcpassword=%s
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Macoin Alert&quot; admin@foo.com
 </source>
         <translation type="unfinished"/>
     </message>
@@ -3335,7 +3335,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Bitcoin is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. Macoin is probably already running.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3380,8 +3380,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Bitcoin will not work properly.</source>
-        <translation>Varoitus: Tarkista että tietokoneesi kellonaika ja päivämäärä ovat paikkansapitäviä! Bitcoin ei toimi oikein väärällä päivämäärällä ja/tai kellonajalla.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Macoin will not work properly.</source>
+        <translation>Varoitus: Tarkista että tietokoneesi kellonaika ja päivämäärä ovat paikkansapitäviä! Macoin ei toimi oikein väärällä päivämäärällä ja/tai kellonajalla.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3415,12 +3415,12 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+1"/>
-        <source>Bitcoin Core Daemon</source>
+        <source>Macoin Core Daemon</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
-        <source>Bitcoin RPC client version</source>
+        <source>Macoin RPC client version</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3620,7 +3620,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to Bitcoin server</source>
+        <source>Send command to Macoin server</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3640,7 +3640,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+2"/>
-        <source>Start Bitcoin server</source>
+        <source>Start Macoin server</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3650,7 +3650,7 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+10"/>
-        <source>Usage (deprecated, use bitcoin-cli):</source>
+        <source>Usage (deprecated, use macoin-cli):</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -3755,8 +3755,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+9"/>
-        <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
-        <translation>SSL asetukset (katso Bitcoin Wikistä tarkemmat SSL ohjeet)</translation>
+        <source>SSL options: (see the Macoin Wiki for SSL setup instructions)</source>
+        <translation>SSL asetukset (katso Macoin Wikistä tarkemmat SSL ohjeet)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -3915,13 +3915,13 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Bitcoin</source>
+        <source>Error loading wallet.dat: Wallet requires newer version of Macoin</source>
         <translation>Virhe ladattaessa wallet.dat-tiedostoa: Tarvitset uudemman version Bitcoinista</translation>
     </message>
     <message>
         <location line="+98"/>
-        <source>Wallet needed to be rewritten: restart Bitcoin to complete</source>
-        <translation>Lompakko tarvitsee uudelleenkirjoittaa: käynnistä Bitcoin uudelleen</translation>
+        <source>Wallet needed to be rewritten: restart Macoin to complete</source>
+        <translation>Lompakko tarvitsee uudelleenkirjoittaa: käynnistä Macoin uudelleen</translation>
     </message>
     <message>
         <location line="-100"/>
@@ -3980,8 +3980,8 @@ for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="-32"/>
-        <source>Unable to bind to %s on this computer. Bitcoin is probably already running.</source>
-        <translation>Kytkeytyminen %s ei onnistu tällä tietokoneella. Bitcoin on todennäköisesti jo ajamassa.</translation>
+        <source>Unable to bind to %s on this computer. Macoin is probably already running.</source>
+        <translation>Kytkeytyminen %s ei onnistu tällä tietokoneella. Macoin on todennäköisesti jo ajamassa.</translation>
     </message>
     <message>
         <location line="+95"/>

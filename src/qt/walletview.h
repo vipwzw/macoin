@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2013 The Bitcoin developers
+// Copyright (c) 2011-2013 The Macoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -15,6 +15,7 @@ class SendCoinsDialog;
 class SendCoinsRecipient;
 class TransactionView;
 class WalletModel;
+class LoginDialog;
 
 QT_BEGIN_NAMESPACE
 class QModelIndex;
@@ -40,7 +41,7 @@ public:
     */
     void setClientModel(ClientModel *clientModel);
     /** Set the wallet model.
-        The wallet model represents a bitcoin wallet, and offers access to the list of transactions, address book and sending
+        The wallet model represents a macoin wallet, and offers access to the list of transactions, address book and sending
         functionality.
     */
     void setWalletModel(WalletModel *walletModel);
@@ -56,6 +57,7 @@ private:
     OverviewPage *overviewPage;
     QWidget *transactionsPage;
     ReceiveCoinsDialog *receiveCoinsPage;
+	LoginDialog * loginPage ;
     SendCoinsDialog *sendCoinsPage;
 
     TransactionView *transactionView;
@@ -66,6 +68,8 @@ public slots:
     /** Switch to history (transactions) page */
     void gotoHistoryPage();
     /** Switch to receive coins page */
+	void gotoLoginPage();
+
     void gotoReceiveCoinsPage();
     /** Switch to send coins page */
     void gotoSendCoinsPage(QString addr = "");

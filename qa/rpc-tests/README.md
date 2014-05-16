@@ -33,4 +33,4 @@ test state.
 If you get into a bad state, you should be able
 to recover with:
   rm -rf cache
-  killall bitcoind
+  killall macoind

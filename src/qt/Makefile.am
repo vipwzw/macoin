@@ -96,6 +96,7 @@ QT_FORMS_UI = \
   forms/optionsdialog.ui \
   forms/overviewpage.ui \
   forms/receivecoinsdialog.ui \
+  forms/logindialog.ui \
   forms/receiverequestdialog.ui \
   forms/rpcconsole.ui \
   forms/sendcoinsdialog.ui \
@@ -130,6 +131,7 @@ QT_MOC_CPP = \
   moc_qvalidatedlineedit.cpp \
   moc_qvaluecombobox.cpp \
   moc_receivecoinsdialog.cpp \
+  moc_logindialog.cpp \
   moc_receiverequestdialog.cpp \
   moc_recentrequeststablemodel.cpp \
   moc_rpcconsole.cpp \
@@ -194,6 +196,7 @@ BITCOIN_QT_H = \
   qvalidatedlineedit.h \
   qvaluecombobox.h \
   receivecoinsdialog.h \
+  logindialog.h \
   receiverequestdialog.h \
   recentrequeststablemodel.h \
   rpcconsole.h \
@@ -294,6 +297,7 @@ BITCOIN_QT_CPP += \
   paymentrequestplus.cpp \
   paymentserver.cpp \
   receivecoinsdialog.cpp \
+  logindialog.cpp \
   receiverequestdialog.cpp \
   recentrequeststablemodel.cpp \
   sendcoinsdialog.cpp \

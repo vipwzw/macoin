@@ -2,11 +2,11 @@ Python Tools
 ---------------------
 
 ### [BitRPC](/contrib/bitrpc) ###
-Allows for sending of all standard Bitcoin commands via RPC rather than as command line args.
+Allows for sending of all standard Macoin commands via RPC rather than as command line args.
 
 ### [PyMiner](/contrib/pyminer) ###
 
-This is a 'getwork' CPU mining client for Bitcoin. It is pure-python, and therefore very, very slow.  The purpose is to provide a reference implementation of a miner, for study.
+This is a 'getwork' CPU mining client for Macoin. It is pure-python, and therefore very, very slow.  The purpose is to provide a reference implementation of a miner, for study.
 
 ### [SpendFrom](/contrib/spendfrom) ###
 
@@ -37,13 +37,13 @@ Scripts and notes for Mac builds.
 
 ### [Qos](/contrib/qos) ###
 
-A Linux bash script that will set up tc to limit the outgoing bandwidth for connections to the Bitcoin network. This means one can have an always-on bitcoind instance running, and another local bitcoind/bitcoin-qt instance which connects to this node and receives blocks from it.
+A Linux bash script that will set up tc to limit the outgoing bandwidth for connections to the Macoin network. This means one can have an always-on bitcoind instance running, and another local bitcoind/bitcoin-qt instance which connects to this node and receives blocks from it.
 
 ### [Seeds](/contrib/seeds) ###
 Utility to generate the pnSeed[] array that is compiled into the client.
 
 ### [TestGen](/contrib/testgen) ###
-Utilities to generate test vectors for the data-driven Bitcoin tests.
+Utilities to generate test vectors for the data-driven Macoin tests.
 
 ### [Test Patches](/contrib/test-patches) ###
 These patches are applied when the automated pull-tester

@@ -3,13 +3,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Bitcoin Core</source>
-        <translation>关于比特币核心</translation>
+        <source>About Macoin Core</source>
+        <translation>关于马币核心</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Bitcoin Core&lt;/b&gt; version</source>
-        <translation>&lt;b&gt;比特币核心&lt;/b&gt; 版本</translation>
+        <source>&lt;b&gt;Macoin Core&lt;/b&gt; version</source>
+        <translation>&lt;b&gt;马币核心&lt;/b&gt; 版本</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -33,8 +33,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+0"/>
-        <source>The Bitcoin Core developers</source>
-        <translation>Bitcoin Core 的开发者</translation>
+        <source>The Macoin Core developers</source>
+        <translation>Macoin Core 的开发者</translation>
     </message>
 </context>
 <context>
@@ -121,13 +121,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>这是您用来付款的比特币地址。在付款前，请总是核实付款金额和收款地址。</translation>
+        <source>These are your Macoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>这是您用来付款的马币地址。在付款前，请总是核实付款金额和收款地址。</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>These are your Bitcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>这些都是您的比特币地址，可用于收款。建议对每笔交易都使用一个新的地址。</translation>
+        <source>These are your Macoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>这些都是您的马币地址，可用于收款。建议对每笔交易都使用一个新的地址。</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -247,8 +247,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>警告：如果您加密了您的钱包，但是忘记了密码，你将会&lt;b&gt;丢失所有的比特币&lt;/b&gt;！</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MACOINS&lt;/b&gt;!</source>
+        <translation>警告：如果您加密了您的钱包，但是忘记了密码，你将会&lt;b&gt;丢失所有的马币&lt;/b&gt;！</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -274,8 +274,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-56"/>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>比特币客户端将关闭软件以完成加密过程。请您谨记：钱包加密并不是万能的，电脑中毒等原因仍可能导致您的比特币意外丢失。</translation>
+        <source>Macoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your macoins from being stolen by malware infecting your computer.</source>
+        <translation>马币客户端将关闭软件以完成加密过程。请您谨记：钱包加密并不是万能的，电脑中毒等原因仍可能导致您的马币意外丢失。</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -368,8 +368,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>Show information about Bitcoin</source>
-        <translation>显示比特币的相关信息</translation>
+        <source>Show information about Macoin</source>
+        <translation>显示马币的相关信息</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -429,12 +429,12 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-405"/>
-        <source>Send coins to a Bitcoin address</source>
-        <translation>向一个比特币地址发送比特币</translation>
+        <source>Send coins to a Macoin address</source>
+        <translation>向一个马币地址发送马币</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for Bitcoin</source>
+        <source>Modify configuration options for Macoin</source>
         <translation>设置选项</translation>
     </message>
     <message>
@@ -464,8 +464,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+430"/>
-        <source>Bitcoin</source>
-        <translation>比特币</translation>
+        <source>Macoin</source>
+        <translation>马币</translation>
     </message>
     <message>
         <location line="-643"/>
@@ -500,13 +500,13 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
-        <translation>用比特币地址关联的私钥为消息签名，以证明您拥有这个比特币地址</translation>
+        <source>Sign messages with your Macoin addresses to prove you own them</source>
+        <translation>用马币地址关联的私钥为消息签名，以证明您拥有这个马币地址</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
-        <translation>校验消息，确保该消息是由指定的比特币地址所有者签名的</translation>
+        <source>Verify messages to ensure they were signed with specified Macoin addresses</source>
+        <translation>校验消息，确保该消息是由指定的马币地址所有者签名的</translation>
     </message>
     <message>
         <location line="+48"/>
@@ -536,19 +536,19 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="-401"/>
-        <source>Bitcoin Core</source>
-        <translation>比特币核心</translation>
+        <source>Macoin Core</source>
+        <translation>马币核心</translation>
     </message>
     <message>
         <location line="+163"/>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>请求支付（生成二维码和 bitcoin: URI）</translation>
+        <source>Request payments (generates QR codes and macoin: URIs)</source>
+        <translation>请求支付（生成二维码和 macoin: URI）</translation>
     </message>
     <message>
         <location line="+29"/>
         <location line="+2"/>
-        <source>&amp;About Bitcoin Core</source>
-        <translation>关于比特币核心(&amp;A)</translation>
+        <source>&amp;About Macoin Core</source>
+        <translation>关于马币核心(&amp;A)</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -562,8 +562,8 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+3"/>
-        <source>Open a bitcoin: URI or payment request</source>
-        <translation>打开一个比特币：URI 或支付请求</translation>
+        <source>Open a macoin: URI or payment request</source>
+        <translation>打开一个马币：URI 或支付请求</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -572,19 +572,19 @@ This product includes software developed by the OpenSSL Project for use in the O
     </message>
     <message>
         <location line="+1"/>
-        <source>Show the Bitcoin Core help message to get a list with possible Bitcoin command-line options</source>
+        <source>Show the Macoin Core help message to get a list with possible Macoin command-line options</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+159"/>
         <location line="+5"/>
-        <source>Bitcoin client</source>
-        <translation>比特币客户端</translation>
+        <source>Macoin client</source>
+        <translation>马币客户端</translation>
     </message>
     <message numerus="yes">
         <location line="+142"/>
-        <source>%n active connection(s) to Bitcoin network</source>
-        <translation><numerusform>%n条到比特币网络的活动连接</numerusform></translation>
+        <source>%n active connection(s) to Macoin network</source>
+        <translation><numerusform>%n条到马币网络的活动连接</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -691,7 +691,7 @@ Address: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+438"/>
-        <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. Macoin can no longer continue safely and will quit.</source>
         <translation>发生严重错误。</translation>
     </message>
 </context>
@@ -1049,8 +1049,8 @@ Address: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Bitcoin address.</source>
-        <translation>您输入的“%1”不是有效的比特币地址。</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Macoin address.</source>
+        <translation>您输入的“%1”不是有效的马币地址。</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1095,13 +1095,13 @@ Address: %4
     <name>HelpMessageDialog</name>
     <message>
         <location filename="../forms/helpmessagedialog.ui" line="+19"/>
-        <source>Bitcoin Core - Command-line options</source>
+        <source>Macoin Core - Command-line options</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location filename="../utilitydialog.cpp" line="+38"/>
-        <source>Bitcoin Core</source>
-        <translation>比特币核心</translation>
+        <source>Macoin Core</source>
+        <translation>马币核心</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -1154,17 +1154,17 @@ Address: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Welcome to Bitcoin Core.</source>
+        <source>Welcome to Macoin Core.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+26"/>
-        <source>As this is the first time the program is launched, you can choose where Bitcoin Core will store its data.</source>
+        <source>As this is the first time the program is launched, you can choose where Macoin Core will store its data.</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+10"/>
-        <source>Bitcoin Core will download and store a copy of the Bitcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <source>Macoin Core will download and store a copy of the Macoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -1179,8 +1179,8 @@ Address: %4
     </message>
     <message>
         <location filename="../intro.cpp" line="+85"/>
-        <source>Bitcoin</source>
-        <translation>比特币</translation>
+        <source>Macoin</source>
+        <translation>马币</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1255,12 +1255,12 @@ Address: %4
     </message>
     <message>
         <location line="+31"/>
-        <source>Automatically start Bitcoin after logging in to the system.</source>
-        <translation>登录系统后自动开启比特币客户端</translation>
+        <source>Automatically start Macoin after logging in to the system.</source>
+        <translation>登录系统后自动开启马币客户端</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Bitcoin on system login</source>
+        <source>&amp;Start Macoin on system login</source>
         <translation>系统启动时运行(&amp;S)</translation>
     </message>
     <message>
@@ -1290,8 +1290,8 @@ Address: %4
     </message>
     <message>
         <location line="+58"/>
-        <source>Connect to the Bitcoin network through a SOCKS proxy.</source>
-        <translation>通过 SOCKS 代理连接到比特币网络。</translation>
+        <source>Connect to the Macoin network through a SOCKS proxy.</source>
+        <translation>通过 SOCKS 代理连接到马币网络。</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1325,8 +1325,8 @@ Address: %4
     </message>
     <message>
         <location line="+6"/>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>自动在路由器中打开比特币端口。只有当您的路由器开启了 UPnP 选项时此功能才有效。</translation>
+        <source>Automatically open the Macoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>自动在路由器中打开马币端口。只有当您的路由器开启了 UPnP 选项时此功能才有效。</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1395,28 +1395,28 @@ Address: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Bitcoin.</source>
+        <source>The user interface language can be set here. This setting will take effect after restarting Macoin.</source>
         <translation>在这里设置用户界面的语言。设置将在客户端重启后生效。</translation>
     </message>
     <message>
         <location line="+11"/>
         <source>&amp;Unit to show amounts in:</source>
-        <translation>比特币金额单位(&amp;U)：</translation>
+        <translation>马币金额单位(&amp;U)：</translation>
     </message>
     <message>
         <location line="+13"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>选择比特币单位。</translation>
+        <translation>选择马币单位。</translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show Bitcoin addresses in the transaction list or not.</source>
-        <translation>是否需要在交易清单中显示比特币地址。</translation>
+        <source>Whether to show Macoin addresses in the transaction list or not.</source>
+        <translation>是否需要在交易清单中显示马币地址。</translation>
     </message>
     <message>
         <location line="+3"/>
         <source>&amp;Display addresses in transaction list</source>
-        <translation>在交易清单中显示比特币地址(&amp;D)</translation>
+        <translation>在交易清单中显示马币地址(&amp;D)</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -1485,8 +1485,8 @@ Address: %4
     <message>
         <location line="+50"/>
         <location line="+231"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>现在显示的消息可能是过期的. 在连接上比特币网络节点后，您的钱包将自动与网络同步，但是这个过程还没有完成。</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Macoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>现在显示的消息可能是过期的. 在连接上马币网络节点后，您的钱包将自动与网络同步，但是这个过程还没有完成。</translation>
     </message>
     <message>
         <location line="-155"/>
@@ -1555,8 +1555,8 @@ Address: %4
     </message>
     <message>
         <location line="+1"/>
-        <source>URI can not be parsed! This can be caused by an invalid Bitcoin address or malformed URI parameters.</source>
-        <translation>URI无法解析！原因可能是比特币地址不正确，或者URI参数错误。</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Macoin address or malformed URI parameters.</source>
+        <translation>URI无法解析！原因可能是马币地址不正确，或者URI参数错误。</translation>
     </message>
     <message>
         <location line="+96"/>
@@ -1575,8 +1575,8 @@ Address: %4
     </message>
     <message>
         <location line="-353"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>暂时无法启动比特币：点击支付功能</translation>
+        <source>Cannot start macoin: click-to-pay handler</source>
+        <translation>暂时无法启动马币：点击支付功能</translation>
     </message>
     <message>
         <location line="+58"/>
@@ -1644,8 +1644,8 @@ Address: %4
     <message>
         <location filename="../bitcoin.cpp" line="+71"/>
         <location line="+11"/>
-        <source>Bitcoin</source>
-        <translation>比特币</translation>
+        <source>Macoin</source>
+        <translation>马币</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1815,7 +1815,7 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Bitcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the Macoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation>打开当前目录中的调试日志文件。日志文件大的话可能要等上几秒钟。</translation>
     </message>
     <message>
@@ -1825,7 +1825,7 @@ Address: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the Bitcoin RPC console.</source>
+        <source>Welcome to the Macoin RPC console.</source>
         <translation>欢迎来到 RPC 控制台。</translation>
     </message>
     <message>
@@ -1908,7 +1908,137 @@ Address: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Bitcoin network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Macoin network.</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>Use this form to request payments. All fields are &lt;b&gt;optional&lt;/b&gt;.</source>
+        <translation>使用此表单要求付款。所有字段都是&lt;b&gt;可选&lt;/b&gt;。</translation>
+    </message>
+    <message>
+        <location line="+39"/>
+        <source>An optional amount to request. Leave this empty or zero to not request a specific amount.</source>
+        <translation>可选的请求金额。留空或填零为不要求具体金额。</translation>
+    </message>
+    <message>
+        <location line="+17"/>
+        <source>Clear all fields of the form.</source>
+        <translation>清空此表单的所有字段。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Clear</source>
+        <translation>清除</translation>
+    </message>
+    <message>
+        <location line="+36"/>
+        <source>&amp;Request payment</source>
+        <translation>请求付款(&amp;R)</translation>
+    </message>
+    <message>
+        <location line="+47"/>
+        <source>Requested payments</source>
+        <translation>已请求支付</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Show the selected request (does the same as double clicking an entry)</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Show</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>Remove the selected entries from the list</source>
+        <translation type="unfinished"/>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>Remove</source>
+        <translation>移除</translation>
+    </message>
+</context>
+<context>
+    <name>LoginDialog</name>
+    <message>
+        <location filename="../forms/logindialog.ui" line="+83"/>
+        <source>&amp;Amount:</source>
+        <translation>总额(&amp;A)：</translation>
+    </message>
+    <message>
+        <location line="-13"/>
+        <source>&amp;Label:</source>
+        <translation>标签(&amp;L)：</translation>
+    </message>
+    <message>
+        <location line="-34"/>
+        <source>&amp;Message:</source>
+        <translation>消息(&amp;M)：</translation>
+    </message>
+    <message>
+        <location line="+5"/>
+        <source>&amp;UserName:</source>
+        <translation>用户名称</translation>
+    </message>
+    <message>
+        <location line="+12"/>
+        <source>&amp;Login</source>
+        <translation>登陆</translation>
+    </message>
+	
+    <message>
+        <location line="+6"/>
+        <source>&amp;Password:</source>
+        <translation>用户密码</translation>
+    </message>
+
+    <message>
+        <location line="+8"/>
+        <source>username.</source>
+        <translation>用户名称</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>please input user name.</source>
+        <translation>请输入用户名称</translation>
+    </message>
+    <message>
+        <location line="+10"/>
+        <source>password.</source>
+        <translation>请输入用户密码</translation>
+    </message>
+    <message>
+        <location line="+11"/>
+        <source>please input password.</source>
+        <translation>请输入用户密码</translation>
+    </message>
+    <message>
+        <location line="+9"/>
+        <source>username.</source>
+        <translation>用户名称</translation>
+    </message>
+    <message>
+        <location line="-17"/>
+        <source>Reuse one of the previously used receiving addresses. Reusing addresses has security and privacy issues. Do not use this unless re-generating a payment request made before.</source>
+        <translation>重复使用以前用过的接收地址。重用地址有安全和隐私方面的隐患。除非是为重复生成同一项支付请求，否则请不要这样做。</translation>
+    </message>
+    <message>
+        <location line="+3"/>
+        <source>R&amp;euse an existing receiving address (not recommended)</source>
+        <translation>重用现有的接收地址（不推荐）</translation>
+    </message>
+    <message>
+        <location line="+27"/>
+        <source>An optional label to associate with the new receiving address</source>
+        <translation>与新接收地址相关的标签，可选</translation>
+    </message>
+    <message>
+        <location line="+7"/>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Macoin network.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2192,8 +2322,8 @@ Address: %4
     </message>
     <message>
         <location line="-136"/>
-        <source>Enter a Bitcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>请输入比特币地址（例如: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L）</translation>
+        <source>Enter a Macoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation>请输入马币地址（例如: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L）</translation>
     </message>
     <message>
         <location line="+15"/>
@@ -2282,8 +2412,8 @@ Address: %4
     </message>
     <message>
         <location line="+112"/>
-        <source>Warning: Invalid Bitcoin address</source>
-        <translation>警告：无效的比特币地址</translation>
+        <source>Warning: Invalid Macoin address</source>
+        <translation>警告：无效的马币地址</translation>
     </message>
     <message>
         <location line="+21"/>
@@ -2384,7 +2514,7 @@ Address: %4
     </message>
     <message>
         <location line="+10"/>
-        <source>A message that was attached to the Bitcoin URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
+        <source>A message that was attached to the Macoin URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Macoin network.</source>
         <translation type="unfinished"/>
     </message>
     <message>
@@ -2416,16 +2546,16 @@ Address: %4
     </message>
     <message>
         <location filename="../sendcoinsentry.cpp" line="+1"/>
-        <source>Enter a Bitcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>请输入比特币地址（例如: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L）</translation>
+        <source>Enter a Macoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation>请输入马币地址（例如: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L）</translation>
     </message>
 </context>
 <context>
     <name>ShutdownWindow</name>
     <message>
         <location filename="../utilitydialog.cpp" line="+48"/>
-        <source>Bitcoin Core is shutting down...</source>
-        <translation>比特币核心正在关机...</translation>
+        <source>Macoin Core is shutting down...</source>
+        <translation>马币核心正在关机...</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2494,7 +2624,7 @@ Address: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Bitcoin address</source>
+        <source>Sign the message to prove you own this Macoin address</source>
         <translation>签名消息，证明这个地址属于您。</translation>
     </message>
     <message>
@@ -2530,8 +2660,8 @@ Address: %4
     </message>
     <message>
         <location line="+40"/>
-        <source>Verify the message to ensure it was signed with the specified Bitcoin address</source>
-        <translation>验证消息，确保消息是由指定的比特币地址签名过的。</translation>
+        <source>Verify the message to ensure it was signed with the specified Macoin address</source>
+        <translation>验证消息，确保消息是由指定的马币地址签名过的。</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2546,8 +2676,8 @@ Address: %4
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+29"/>
         <location line="+3"/>
-        <source>Enter a Bitcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>请输入比特币地址 (例如: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a Macoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation>请输入马币地址 (例如: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
     <message>
         <location line="-2"/>
@@ -2556,8 +2686,8 @@ Address: %4
     </message>
     <message>
         <location line="+3"/>
-        <source>Enter Bitcoin signature</source>
-        <translation>输入比特币签名</translation>
+        <source>Enter Macoin signature</source>
+        <translation>输入马币签名</translation>
     </message>
     <message>
         <location line="+84"/>
@@ -2630,13 +2760,13 @@ Address: %4
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+28"/>
-        <source>Bitcoin Core</source>
-        <translation>比特币核心</translation>
+        <source>Macoin Core</source>
+        <translation>马币测试</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>The Bitcoin Core developers</source>
-        <translation>Bitcoin Core 的开发者</translation>
+        <source>The Macoin Core developers</source>
+        <translation>Macoin Core 的开发者</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2784,7 +2914,7 @@ Address: %4
     <message>
         <location line="+7"/>
         <source>Generated coins must mature %1 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>生成的比特币在可以使用前必须有 %1 个成熟的区块。当您生成了此区块后，它将被广播到网络中以加入区块链。如果它未成功进入区块链，其状态将变更为“不接受”并且不可使用。这可能偶尔会发生，如果另一个节点比你早几秒钟成功生成一个区块。</translation>
+        <translation>生成的马币在可以使用前必须有 %1 个成熟的区块。当您生成了此区块后，它将被广播到网络中以加入区块链。如果它未成功进入区块链，其状态将变更为“不接受”并且不可使用。这可能偶尔会发生，如果另一个节点比你早几秒钟成功生成一个区块。</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3156,7 +3286,7 @@ Address: %4
     <message>
         <location filename="../walletmodel.cpp" line="+245"/>
         <source>Send Coins</source>
-        <translation>发送比特币</translation>
+        <translation>发送马币</translation>
     </message>
 </context>
 <context>
@@ -3203,7 +3333,7 @@ Address: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>macoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+221"/>
         <source>Usage:</source>
@@ -3229,14 +3359,14 @@ Address: %4
     </message>
     <message>
         <location line="+22"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>指定配置文件 (默认为 bitcoin.conf)
+        <source>Specify configuration file (default: macoin.conf)</source>
+        <translation>指定配置文件 (默认为 macoin.conf)
 </translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>指定 pid 文件 (默认为 bitcoind.pid)
+        <source>Specify pid file (default: macoind.pid)</source>
+        <translation>指定 pid 文件 (默认为 macoind.pid)
 </translation>
     </message>
     <message>
@@ -3325,7 +3455,7 @@ rpcpassword=%s
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Macoin Alert&quot; admin@foo.com
 </source>
         <translation>%s, 您必须在配置文件设置rpcpassword:
  %s
@@ -3336,7 +3466,7 @@ rpcpassword=%s
 用户名和密码 必! 须! 不一样。
 如果配置文件不存在，请自行建立一个只有所有者拥有只读权限的文件。
 推荐您开启提示通知以便收到错误通知，
-像这样: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.com
+像这样: alertnotify=echo %%s | mail -s &quot;Macoin Alert&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -3356,7 +3486,7 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Bitcoin is probably already running.</source>
+        <source>Cannot obtain a lock on data directory %s. Macoin is probably already running.</source>
         <translation>无法给数据目录 %s上锁。本软件可能已经在运行。</translation>
     </message>
     <message>
@@ -3372,7 +3502,7 @@ rpcpassword=%s
     <message>
         <location line="+3"/>
         <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>错误：该交易被拒绝！发生这种错误的原因可能是：钱包中的比特币已经被用掉，有可能您复制了wallet.dat钱包文件，然后用复制的钱包文件支付了比特币，但是这个钱包文件中没有记录。</translation>
+        <translation>错误：该交易被拒绝！发生这种错误的原因可能是：钱包中的马币已经被用掉，有可能您复制了wallet.dat钱包文件，然后用复制的钱包文件支付了马币，但是这个钱包文件中没有记录。</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -3401,8 +3531,8 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Bitcoin will not work properly.</source>
-        <translation>警告：请检查电脑的日期时间设置是否正确！时间错误可能会导致比特币客户端运行异常。</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Macoin will not work properly.</source>
+        <translation>警告：请检查电脑的日期时间设置是否正确！时间错误可能会导致马币客户端运行异常。</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3436,13 +3566,13 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+1"/>
-        <source>Bitcoin Core Daemon</source>
+        <source>Macoin Core Daemon</source>
         <translation type="unfinished"/>
     </message>
     <message>
         <location line="+1"/>
-        <source>Bitcoin RPC client version</source>
-        <translation>Bitcoin RPC 客户端版本</translation>
+        <source>Macoin RPC client version</source>
+        <translation>Macoin RPC 客户端版本</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3577,7 +3707,7 @@ rpcpassword=%s
     <message>
         <location line="+1"/>
         <source>Fee per kB to add to transactions you send</source>
-        <translation>为付款交易支付比特币(每kb)</translation>
+        <translation>为付款交易支付马币(每kb)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3587,7 +3717,7 @@ rpcpassword=%s
     <message>
         <location line="+1"/>
         <source>Generate coins (default: 0)</source>
-        <translation>生成比特币（默认为 0）</translation>
+        <translation>生成马币（默认为 0）</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3641,8 +3771,8 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to Bitcoin server</source>
-        <translation>发送命令到比特币服务器</translation>
+        <source>Send command to Macoin server</source>
+        <translation>发送命令到马币服务器</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -3661,8 +3791,8 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+2"/>
-        <source>Start Bitcoin server</source>
-        <translation>启动比特币服务器</translation>
+        <source>Start Macoin server</source>
+        <translation>启动马币服务器</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3671,8 +3801,8 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+10"/>
-        <source>Usage (deprecated, use bitcoin-cli):</source>
-        <translation>用法（不推荐，请使用 bitcoin-cli）：</translation>
+        <source>Usage (deprecated, use macoin-cli):</source>
+        <translation>用法（不推荐，请使用 macoin-cli）：</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -3776,7 +3906,7 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+9"/>
-        <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
+        <source>SSL options: (see the Macoin Wiki for SSL setup instructions)</source>
         <translation>SSL选项：(参见Bitcoin Wiki关于SSL设置栏目)</translation>
     </message>
     <message>
@@ -3941,12 +4071,12 @@ rpcpassword=%s
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Bitcoin</source>
+        <source>Error loading wallet.dat: Wallet requires newer version of Macoin</source>
         <translation>wallet.dat 钱包文件加载错误：请升级到最新版Bitcoin客户端</translation>
     </message>
     <message>
         <location line="+98"/>
-        <source>Wallet needed to be rewritten: restart Bitcoin to complete</source>
+        <source>Wallet needed to be rewritten: restart Macoin to complete</source>
         <translation>钱包文件需要被重写：请退出并重新启动Bitcoin客户端</translation>
     </message>
     <message>
@@ -4006,8 +4136,8 @@ rpcpassword=%s
     </message>
     <message>
         <location line="-32"/>
-        <source>Unable to bind to %s on this computer. Bitcoin is probably already running.</source>
-        <translation>无法在本机绑定 %s 端口。比特币客户端软件可能已经在运行。</translation>
+        <source>Unable to bind to %s on this computer. Macoin is probably already running.</source>
+        <translation>无法在本机绑定 %s 端口。马币客户端软件可能已经在运行。</translation>
     </message>
     <message>
         <location line="+95"/>

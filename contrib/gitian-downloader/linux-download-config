@@ -1,5 +1,5 @@
 --- 
-name: bitcoin
+name: macoin
 urls:
 - http://bitcoin.org/bitcoin-latest-linux-gitian.zip
 rss:

@@ -34,7 +34,7 @@ Options menu.  You will be prompted to enter a passphrase, which
 will be used as the key to encrypt your wallet and will be needed
 every time you wish to send Bitcoins.  If you lose this passphrase,
 you will lose access to spend all of the bitcoins in your wallet,
-no one, not even the Bitcoin developers can recover your Bitcoins.
+no one, not even the Macoin developers can recover your Bitcoins.
 This means you are responsible for your own security, store your
 passphrase in a secure location and do not forget it.
 
@@ -48,8 +48,8 @@ your coins.
 It is recommended that you backup your wallet file before you
 encrypt your wallet.  To do this, close the Bitcoin client and
 copy the wallet.dat file from ~/.bitcoin/ on Linux, /Users/(user
-name)/Application Support/Bitcoin/ on Mac OSX, and %APPDATA%/Bitcoin/
-on Windows (that is /Users/(user name)/AppData/Roaming/Bitcoin on
+name)/Application Support/Bitcoin/ on Mac OSX, and %APPDATA%/Macoin2/
+on Windows (that is /Users/(user name)/AppData/Roaming/Macoin2 on
 Windows Vista and 7 and /Documents and Settings/(user name)/Application
 Data/Bitcoin on Windows XP).  Once you have copied that file to a
 safe location, reopen the Bitcoin client and Encrypt your wallet.

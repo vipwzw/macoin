@@ -1,5 +1,5 @@
 ---
-name: "bitcoin"
+name: "macoin"
 suites:
 - "precise"
 architectures:
@@ -18,8 +18,8 @@ packages:
 - "bsdmainutils"
 reference_datetime: "2013-06-01 00:00:00"
 remotes:
-- "url": "https://github.com/bitcoin/bitcoin.git"
-  "dir": "bitcoin"
+- "url": "https://github.com/macoin/macoin.git"
+  "dir": "macoin"
 files:
 - "bitcoin-deps-linux32-gitian-r4.zip"
 - "bitcoin-deps-linux64-gitian-r4.zip"
@@ -60,7 +60,7 @@ script: |
   make $MAKEOPTS install-strip
   make $MAKEOPTS clean
 
-  # Build fully static versions of bitcoind and bitcoin-cli for older Linux distros
+  # Build fully static versions of bitcoind and macoin-cli for older Linux distros
   STATIC_BINDIR="$HOME/bindir.static"
   mkdir -p $STATIC_BINDIR
   # For 32-bit, -pie cannot be used with -static, as invalid executables are generated

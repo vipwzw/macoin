@@ -3,13 +3,13 @@
     <name>AboutDialog</name>
     <message>
         <location filename="../forms/aboutdialog.ui" line="+14"/>
-        <source>About Bitcoin Core</source>
-        <translation>Acerca de Bitcoin Core</translation>
+        <source>About Macoin Core</source>
+        <translation>Acerca de Macoin Core</translation>
     </message>
     <message>
         <location line="+39"/>
-        <source>&lt;b&gt;Bitcoin Core&lt;/b&gt; version</source>
-        <translation>Versión del &lt;b&gt;Núcleo de Bitcoin&lt;b&gt;</translation>
+        <source>&lt;b&gt;Macoin Core&lt;/b&gt; version</source>
+        <translation>Versión del &lt;b&gt;Núcleo de Macoin&lt;b&gt;</translation>
     </message>
     <message>
         <location line="+57"/>
@@ -36,8 +36,8 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="+0"/>
-        <source>The Bitcoin Core developers</source>
-        <translation>Los desarrolladores del Núcleo de Bitcoin</translation>
+        <source>The Macoin Core developers</source>
+        <translation>Los desarrolladores del Núcleo de Macoin</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -106,12 +106,12 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     <message>
         <location filename="../addressbookpage.cpp" line="-30"/>
         <source>Choose the address to send coins to</source>
-        <translation>Escoja la dirección a la que enviar bitcoins</translation>
+        <translation>Escoja la dirección a la que enviar macoins</translation>
     </message>
     <message>
         <location line="+1"/>
         <source>Choose the address to receive coins with</source>
-        <translation>Escoja la dirección de la que recibir bitcoins</translation>
+        <translation>Escoja la dirección de la que recibir macoins</translation>
     </message>
     <message>
         <location line="+5"/>
@@ -130,13 +130,13 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="+7"/>
-        <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estas son sus direcciones Bitcoin para enviar pagos. Compruebe siempre la cantidad y la dirección receptora antes de enviar bitcoins.</translation>
+        <source>These are your Macoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Estas son sus direcciones Macoin para enviar pagos. Compruebe siempre la cantidad y la dirección receptora antes de enviar macoins.</translation>
     </message>
     <message>
         <location line="+4"/>
-        <source>These are your Bitcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Estas son sus direcciones de Bitcoin para recibir pagos. Se recomienda utilizar una nueva dirección de recepción para cada transacción.</translation>
+        <source>These are your Macoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Estas son sus direcciones de Macoin para recibir pagos. Se recomienda utilizar una nueva dirección de recepción para cada transacción.</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -256,8 +256,8 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="+1"/>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Atencion: ¡Si cifra su monedero y pierde la contraseña perderá &lt;b&gt;TODOS SUS BITCOINS&lt;/b&gt;!&quot;</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR MACOINS&lt;/b&gt;!</source>
+        <translation>Atencion: ¡Si cifra su monedero y pierde la contraseña perderá &lt;b&gt;TODOS SUS MACOINS&lt;/b&gt;!&quot;</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -283,8 +283,8 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="-56"/>
-        <source>Bitcoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Bitcoin se cerrará para finalizar el proceso de cifrado. Recuerde que el cifrado de su monedero no puede proteger totalmente sus bitcoins de robo por malware que infecte su sistema.</translation>
+        <source>Macoin will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your macoins from being stolen by malware infecting your computer.</source>
+        <translation>Macoin se cerrará para finalizar el proceso de cifrado. Recuerde que el cifrado de su monedero no puede proteger totalmente sus macoins de robo por malware que infecte su sistema.</translation>
     </message>
     <message>
         <location line="+13"/>
@@ -377,8 +377,8 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="+7"/>
-        <source>Show information about Bitcoin</source>
-        <translation>Mostrar información acerca de Bitcoin</translation>
+        <source>Show information about Macoin</source>
+        <translation>Mostrar información acerca de Macoin</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -438,13 +438,13 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="-405"/>
-        <source>Send coins to a Bitcoin address</source>
-        <translation>Enviar bitcoins a una dirección Bitcoin</translation>
+        <source>Send coins to a Macoin address</source>
+        <translation>Enviar macoins a una dirección Macoin</translation>
     </message>
     <message>
         <location line="+49"/>
-        <source>Modify configuration options for Bitcoin</source>
-        <translation>Modificar las opciones de configuración de Bitcoin</translation>
+        <source>Modify configuration options for Macoin</source>
+        <translation>Modificar las opciones de configuración de Macoin</translation>
     </message>
     <message>
         <location line="+12"/>
@@ -473,8 +473,8 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="+430"/>
-        <source>Bitcoin</source>
-        <translation>Bitcoin</translation>
+        <source>Macoin</source>
+        <translation>Macoin</translation>
     </message>
     <message>
         <location line="-643"/>
@@ -509,13 +509,13 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="+7"/>
-        <source>Sign messages with your Bitcoin addresses to prove you own them</source>
-        <translation>Firmar mensajes con sus direcciones Bitcoin para demostrar la propiedad</translation>
+        <source>Sign messages with your Macoin addresses to prove you own them</source>
+        <translation>Firmar mensajes con sus direcciones Macoin para demostrar la propiedad</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
-        <translation>Verificar mensajes comprobando que están firmados con direcciones Bitcoin concretas</translation>
+        <source>Verify messages to ensure they were signed with specified Macoin addresses</source>
+        <translation>Verificar mensajes comprobando que están firmados con direcciones Macoin concretas</translation>
     </message>
     <message>
         <location line="+48"/>
@@ -545,19 +545,19 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="-401"/>
-        <source>Bitcoin Core</source>
-        <translation>Bitcoin Core</translation>
+        <source>Macoin Core</source>
+        <translation>Macoin Core</translation>
     </message>
     <message>
         <location line="+163"/>
-        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Solicitar pagos (genera codigo QR y URL&apos;s de Bitcoin)</translation>
+        <source>Request payments (generates QR codes and macoin: URIs)</source>
+        <translation>Solicitar pagos (genera codigo QR y URL&apos;s de Macoin)</translation>
     </message>
     <message>
         <location line="+29"/>
         <location line="+2"/>
-        <source>&amp;About Bitcoin Core</source>
-        <translation>&amp;Acerca de Bitcoin Core</translation>
+        <source>&amp;About Macoin Core</source>
+        <translation>&amp;Acerca de Macoin Core</translation>
     </message>
     <message>
         <location line="+35"/>
@@ -571,8 +571,8 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="+3"/>
-        <source>Open a bitcoin: URI or payment request</source>
-        <translation>Abrir un bitcoin: URI o petición de pago</translation>
+        <source>Open a macoin: URI or payment request</source>
+        <translation>Abrir un macoin: URI o petición de pago</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -581,19 +581,19 @@ Eric Young (eay@cryptsoft.com) y el software UPnP escrito por Thomas Bernard.</t
     </message>
     <message>
         <location line="+1"/>
-        <source>Show the Bitcoin Core help message to get a list with possible Bitcoin command-line options</source>
-        <translation>Muestra el mensaje de ayuda Bitcoin Core para obtener una lista con las posibles opciones de línea de comandos Bitcoin</translation>
+        <source>Show the Macoin Core help message to get a list with possible Macoin command-line options</source>
+        <translation>Muestra el mensaje de ayuda Macoin Core para obtener una lista con las posibles opciones de línea de comandos Macoin</translation>
     </message>
     <message>
         <location line="+159"/>
         <location line="+5"/>
-        <source>Bitcoin client</source>
-        <translation>Cliente Bitcoin</translation>
+        <source>Macoin client</source>
+        <translation>Cliente Macoin</translation>
     </message>
     <message numerus="yes">
         <location line="+142"/>
-        <source>%n active connection(s) to Bitcoin network</source>
-        <translation><numerusform>%n conexión activa hacia la red Bitcoin</numerusform><numerusform>%n conexiones activas hacia la red Bitcoin</numerusform></translation>
+        <source>%n active connection(s) to Macoin network</source>
+        <translation><numerusform>%n conexión activa hacia la red Macoin</numerusform><numerusform>%n conexiones activas hacia la red Macoin</numerusform></translation>
     </message>
     <message>
         <location line="+22"/>
@@ -700,8 +700,8 @@ Dirección: %4
     </message>
     <message>
         <location filename="../bitcoin.cpp" line="+435"/>
-        <source>A fatal error occurred. Bitcoin can no longer continue safely and will quit.</source>
-        <translation>Ha ocurrido un error crítico. Bitcoin ya no puede continuar con seguridad y se cerrará.</translation>
+        <source>A fatal error occurred. Macoin can no longer continue safely and will quit.</source>
+        <translation>Ha ocurrido un error crítico. Macoin ya no puede continuar con seguridad y se cerrará.</translation>
     </message>
 </context>
 <context>
@@ -1058,8 +1058,8 @@ Dirección: %4
     </message>
     <message>
         <location line="-5"/>
-        <source>The entered address &quot;%1&quot; is not a valid Bitcoin address.</source>
-        <translation>La dirección introducida &quot;%1&quot; no es una dirección Bitcoin válida.</translation>
+        <source>The entered address &quot;%1&quot; is not a valid Macoin address.</source>
+        <translation>La dirección introducida &quot;%1&quot; no es una dirección Macoin válida.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1104,13 +1104,13 @@ Dirección: %4
     <name>HelpMessageDialog</name>
     <message>
         <location filename="../forms/helpmessagedialog.ui" line="+19"/>
-        <source>Bitcoin Core - Command-line options</source>
-        <translation>Bitcoin Core - opciones de línea de comandos</translation>
+        <source>Macoin Core - Command-line options</source>
+        <translation>Macoin Core - opciones de línea de comandos</translation>
     </message>
     <message>
         <location filename="../utilitydialog.cpp" line="+24"/>
-        <source>Bitcoin Core</source>
-        <translation>Núcleo de Bitcoin</translation>
+        <source>Macoin Core</source>
+        <translation>Núcleo de Macoin</translation>
     </message>
     <message>
         <location line="+0"/>
@@ -1162,18 +1162,18 @@ Dirección: %4
     </message>
     <message>
         <location line="+9"/>
-        <source>Welcome to Bitcoin Core.</source>
-        <translation>Bienvenido al Núcleo de Bitcoin</translation>
+        <source>Welcome to Macoin Core.</source>
+        <translation>Bienvenido al Núcleo de Macoin</translation>
     </message>
     <message>
         <location line="+26"/>
-        <source>As this is the first time the program is launched, you can choose where Bitcoin Core will store its data.</source>
-        <translation>Al ser la primera vez que se ejecuta el programa, puede elegir dónde almacenará sus datos Bitcoin-Qt.</translation>
+        <source>As this is the first time the program is launched, you can choose where Macoin Core will store its data.</source>
+        <translation>Al ser la primera vez que se ejecuta el programa, puede elegir dónde almacenará sus datos Macoin-Qt.</translation>
     </message>
     <message>
         <location line="+10"/>
-        <source>Bitcoin Core will download and store a copy of the Bitcoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>Bitcoin-Qt va a descargar y guardar una copia de la cadena de bloques de Bitcoin. Se almacenará al menos %1GB de datos en este directorio, que irá creciendo con el tiempo. El monedero se guardará también en este directorio.</translation>
+        <source>Macoin Core will download and store a copy of the Macoin block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>Macoin-Qt va a descargar y guardar una copia de la cadena de bloques de Macoin. Se almacenará al menos %1GB de datos en este directorio, que irá creciendo con el tiempo. El monedero se guardará también en este directorio.</translation>
     </message>
     <message>
         <location line="+10"/>
@@ -1187,8 +1187,8 @@ Dirección: %4
     </message>
     <message>
         <location filename="../intro.cpp" line="+85"/>
-        <source>Bitcoin</source>
-        <translation>Bitcoin</translation>
+        <source>Macoin</source>
+        <translation>Macoin</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1263,13 +1263,13 @@ Dirección: %4
     </message>
     <message>
         <location line="-131"/>
-        <source>Automatically start Bitcoin after logging in to the system.</source>
-        <translation>Iniciar Bitcoin automáticamente al encender el sistema.</translation>
+        <source>Automatically start Macoin after logging in to the system.</source>
+        <translation>Iniciar Macoin automáticamente al encender el sistema.</translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>&amp;Start Bitcoin on system login</source>
-        <translation>&amp;Iniciar Bitcoin al iniciar el sistema</translation>
+        <source>&amp;Start Macoin on system login</source>
+        <translation>&amp;Iniciar Macoin al iniciar el sistema</translation>
     </message>
     <message>
         <location line="+9"/>
@@ -1298,8 +1298,8 @@ Dirección: %4
     </message>
     <message>
         <location line="+37"/>
-        <source>Connect to the Bitcoin network through a SOCKS proxy.</source>
-        <translation>Conectarse a la red Bitcoin a través de un proxy SOCKS.</translation>
+        <source>Connect to the Macoin network through a SOCKS proxy.</source>
+        <translation>Conectarse a la red Macoin a través de un proxy SOCKS.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1343,8 +1343,8 @@ Dirección: %4
     </message>
     <message>
         <location line="+40"/>
-        <source>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abrir automáticamente el puerto del cliente Bitcoin en el router. Esta opción solo funciona si el router admite UPnP y está activado.</translation>
+        <source>Automatically open the Macoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abrir automáticamente el puerto del cliente Macoin en el router. Esta opción solo funciona si el router admite UPnP y está activado.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1413,8 +1413,8 @@ Dirección: %4
     </message>
     <message>
         <location line="+13"/>
-        <source>The user interface language can be set here. This setting will take effect after restarting Bitcoin.</source>
-        <translation>El idioma de la interfaz de usuario puede establecerse aquí. Este ajuste se aplicará cuando se reinicie Bitcoin.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Macoin.</source>
+        <translation>El idioma de la interfaz de usuario puede establecerse aquí. Este ajuste se aplicará cuando se reinicie Macoin.</translation>
     </message>
     <message>
         <location line="+11"/>
@@ -1424,12 +1424,12 @@ Dirección: %4
     <message>
         <location line="+13"/>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Elegir la subdivisión predeterminada para mostrar cantidades en la interfaz y cuando se envían bitcoins.</translation>
+        <translation>Elegir la subdivisión predeterminada para mostrar cantidades en la interfaz y cuando se envían macoins.</translation>
     </message>
     <message>
         <location line="+9"/>
-        <source>Whether to show Bitcoin addresses in the transaction list or not.</source>
-        <translation>Mostrar o no las direcciones Bitcoin en la lista de transacciones.</translation>
+        <source>Whether to show Macoin addresses in the transaction list or not.</source>
+        <translation>Mostrar o no las direcciones Macoin en la lista de transacciones.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -1503,8 +1503,8 @@ Dirección: %4
     <message>
         <location line="+50"/>
         <location line="+231"/>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Bitcoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red Bitcoin después de que se haya establecido una conexión, pero este proceso aún no se ha completado.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Macoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red Macoin después de que se haya establecido una conexión, pero este proceso aún no se ha completado.</translation>
     </message>
     <message>
         <location line="-238"/>
@@ -1573,8 +1573,8 @@ Dirección: %4
     </message>
     <message>
         <location line="+1"/>
-        <source>URI can not be parsed! This can be caused by an invalid Bitcoin address or malformed URI parameters.</source>
-        <translation>¡No se puede interpretar la URI! Esto puede deberse a una dirección Bitcoin inválida o a parámetros de URI mal formados.</translation>
+        <source>URI can not be parsed! This can be caused by an invalid Macoin address or malformed URI parameters.</source>
+        <translation>¡No se puede interpretar la URI! Esto puede deberse a una dirección Macoin inválida o a parámetros de URI mal formados.</translation>
     </message>
     <message>
         <location line="+96"/>
@@ -1593,8 +1593,8 @@ Dirección: %4
     </message>
     <message>
         <location line="-353"/>
-        <source>Cannot start bitcoin: click-to-pay handler</source>
-        <translation>No se pudo iniciar bitcoin: manejador de pago-al-clic</translation>
+        <source>Cannot start macoin: click-to-pay handler</source>
+        <translation>No se pudo iniciar macoin: manejador de pago-al-clic</translation>
     </message>
     <message>
         <location line="+58"/>
@@ -1662,8 +1662,8 @@ Dirección: %4
     <message>
         <location filename="../bitcoin.cpp" line="+71"/>
         <location line="+11"/>
-        <source>Bitcoin</source>
-        <translation>Bitcoin</translation>
+        <source>Macoin</source>
+        <translation>Macoin</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1677,8 +1677,8 @@ Dirección: %4
     </message>
     <message>
         <location filename="../guiutil.cpp" line="+82"/>
-        <source>Enter a Bitcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Introduzca una dirección Bitcoin (ej. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a Macoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation>Introduzca una dirección Macoin (ej. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
 </context>
 <context>
@@ -1838,7 +1838,7 @@ Dirección: %4
     </message>
     <message>
         <location line="+7"/>
-        <source>Open the Bitcoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <source>Open the Macoin debug log file from the current data directory. This can take a few seconds for large log files.</source>
         <translation>Abrir el archivo de registro de depuración en el directorio actual de datos. Esto puede llevar varios segundos para archivos de registro grandes.</translation>
     </message>
     <message>
@@ -1848,8 +1848,8 @@ Dirección: %4
     </message>
     <message>
         <location filename="../rpcconsole.cpp" line="-30"/>
-        <source>Welcome to the Bitcoin RPC console.</source>
-        <translation>Bienvenido a la consola RPC de Bitcoin</translation>
+        <source>Welcome to the Macoin RPC console.</source>
+        <translation>Bienvenido a la consola RPC de Macoin</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1927,8 +1927,8 @@ Dirección: %4
     <message>
         <location line="+14"/>
         <location line="+23"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Bitcoin network.</source>
-        <translation>Un mensaje opcional para adjuntar a la solicitud de pago, que se muestra cuando se abre la solicitud. Nota: El mensaje no se enviará con el pago por la red Bitcoin.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Macoin network.</source>
+        <translation>Un mensaje opcional para adjuntar a la solicitud de pago, que se muestra cuando se abre la solicitud. Nota: El mensaje no se enviará con el pago por la red Macoin.</translation>
     </message>
     <message>
         <location line="-7"/>
@@ -2116,7 +2116,7 @@ Dirección: %4
         <location filename="../sendcoinsdialog.cpp" line="+380"/>
         <location line="+80"/>
         <source>Send Coins</source>
-        <translation>Enviar bitcoins</translation>
+        <translation>Enviar macoins</translation>
     </message>
     <message>
         <location line="+76"/>
@@ -2226,7 +2226,7 @@ Dirección: %4
     <message>
         <location filename="../sendcoinsdialog.cpp" line="-229"/>
         <source>Confirm send coins</source>
-        <translation>Confirmar el envío de bitcoins</translation>
+        <translation>Confirmar el envío de macoins</translation>
     </message>
     <message>
         <location line="-74"/>
@@ -2319,12 +2319,12 @@ Dirección: %4
     <message>
         <location line="+4"/>
         <source>The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>¡La transacción fue rechazada! Esto puede haber ocurrido si alguno de los bitcoins de su monedero ya estaba gastado o si ha usado una copia de wallet.dat y los bitcoins estaban gastados en la copia pero no se habían marcado como gastados aqui.</translation>
+        <translation>¡La transacción fue rechazada! Esto puede haber ocurrido si alguno de los macoins de su monedero ya estaba gastado o si ha usado una copia de wallet.dat y los macoins estaban gastados en la copia pero no se habían marcado como gastados aqui.</translation>
     </message>
     <message>
         <location line="+113"/>
-        <source>Warning: Invalid Bitcoin address</source>
-        <translation>Alerta: Dirección de Bitcoin inválida</translation>
+        <source>Warning: Invalid Macoin address</source>
+        <translation>Alerta: Dirección de Macoin inválida</translation>
     </message>
     <message>
         <location line="+20"/>
@@ -2334,7 +2334,7 @@ Dirección: %4
     <message>
         <location line="-11"/>
         <source>Warning: Unknown change address</source>
-        <translation>Alerta: Dirección de Bitcoin inválida</translation>
+        <translation>Alerta: Dirección de Macoin inválida</translation>
     </message>
     <message>
         <location line="-367"/>
@@ -2435,8 +2435,8 @@ Dirección: %4
     </message>
     <message>
         <location line="+33"/>
-        <source>A message that was attached to the bitcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Bitcoin network.</source>
-        <translation>Un mensaje que se adjuntó a la bitcoin: URL que será almacenada con la transacción para su referencia. Nota: Este mensaje no se envía a través de la red Bitcoin.</translation>
+        <source>A message that was attached to the macoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Macoin network.</source>
+        <translation>Un mensaje que se adjuntó a la macoin: URL que será almacenada con la transacción para su referencia. Nota: Este mensaje no se envía a través de la red Macoin.</translation>
     </message>
     <message>
         <location line="+426"/>
@@ -2460,8 +2460,8 @@ Dirección: %4
     <name>ShutdownWindow</name>
     <message>
         <location filename="../utilitydialog.cpp" line="+48"/>
-        <source>Bitcoin Core is shutting down...</source>
-        <translation>El núcleo de Bitcoin se está cerrando...
+        <source>Macoin Core is shutting down...</source>
+        <translation>El núcleo de Macoin se está cerrando...
 </translation>
     </message>
     <message>
@@ -2531,8 +2531,8 @@ Dirección: %4
     </message>
     <message>
         <location line="+21"/>
-        <source>Sign the message to prove you own this Bitcoin address</source>
-        <translation>Firmar el mensaje para demostrar que se posee esta dirección Bitcoin</translation>
+        <source>Sign the message to prove you own this Macoin address</source>
+        <translation>Firmar el mensaje para demostrar que se posee esta dirección Macoin</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2567,8 +2567,8 @@ Dirección: %4
     </message>
     <message>
         <location line="+37"/>
-        <source>Verify the message to ensure it was signed with the specified Bitcoin address</source>
-        <translation>Verificar el mensaje para comprobar que fue firmado con la dirección Bitcoin indicada</translation>
+        <source>Verify the message to ensure it was signed with the specified Macoin address</source>
+        <translation>Verificar el mensaje para comprobar que fue firmado con la dirección Macoin indicada</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -2582,8 +2582,8 @@ Dirección: %4
     </message>
     <message>
         <location filename="../signverifymessagedialog.cpp" line="+30"/>
-        <source>Enter a Bitcoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
-        <translation>Introduzca una dirección Bitcoin (ej. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
+        <source>Enter a Macoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
+        <translation>Introduzca una dirección Macoin (ej. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</translation>
     </message>
     <message>
         <location line="-1"/>
@@ -2661,13 +2661,13 @@ Dirección: %4
     <name>SplashScreen</name>
     <message>
         <location filename="../splashscreen.cpp" line="+28"/>
-        <source>Bitcoin Core</source>
-        <translation>Núcleo de Bitcoin</translation>
+        <source>Macoin Core</source>
+        <translation>Núcleo de Macoin</translation>
     </message>
     <message>
         <location line="+2"/>
-        <source>The Bitcoin Core developers</source>
-        <translation>Los desarrolladores del Núcleo de Bitcoin</translation>
+        <source>The Macoin Core developers</source>
+        <translation>Los desarrolladores del Núcleo de Macoin</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -2820,7 +2820,7 @@ Dirección: %4
     <message>
         <location line="+7"/>
         <source>Generated coins must mature %1 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to &quot;not accepted&quot; and it won&apos;t be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Los bitcoins generados deben madurar %1 bloques antes de que puedan gastarse. Cuando generó este bloque, se transmitió a la red para que se añadiera a la cadena de bloques. Si no consigue entrar en la cadena, su estado cambiará a &quot;no aceptado&quot; y ya no se podrá gastar. Esto puede ocurrir ocasionalmente si otro nodo genera un bloque a pocos segundos del suyo.</translation>
+        <translation>Los macoins generados deben madurar %1 bloques antes de que puedan gastarse. Cuando generó este bloque, se transmitió a la red para que se añadiera a la cadena de bloques. Si no consigue entrar en la cadena, su estado cambiará a &quot;no aceptado&quot; y ya no se podrá gastar. Esto puede ocurrir ocasionalmente si otro nodo genera un bloque a pocos segundos del suyo.</translation>
     </message>
     <message>
         <location line="+8"/>
@@ -3201,7 +3201,7 @@ Dirección: %4
     <message>
         <location filename="../walletmodel.cpp" line="+245"/>
         <source>Send Coins</source>
-        <translation>Enviar bitcoins</translation>
+        <translation>Enviar macoins</translation>
     </message>
 </context>
 <context>
@@ -3248,7 +3248,7 @@ Dirección: %4
     </message>
 </context>
 <context>
-    <name>bitcoin-core</name>
+    <name>macoin-core</name>
     <message>
         <location filename="../bitcoinstrings.cpp" line="+223"/>
         <source>Usage:</source>
@@ -3274,14 +3274,14 @@ Dirección: %4
     </message>
     <message>
         <location line="+22"/>
-        <source>Specify configuration file (default: bitcoin.conf)</source>
-        <translation>Especificar archivo de configuración (predeterminado: bitcoin.conf)
+        <source>Specify configuration file (default: macoin.conf)</source>
+        <translation>Especificar archivo de configuración (predeterminado: macoin.conf)
 </translation>
     </message>
     <message>
         <location line="+3"/>
-        <source>Specify pid file (default: bitcoind.pid)</source>
-        <translation>Especificar archivo pid (predeterminado: bitcoin.pid)
+        <source>Specify pid file (default: macoind.pid)</source>
+        <translation>Especificar archivo pid (predeterminado: macoin.pid)
 </translation>
     </message>
     <message>
@@ -3368,7 +3368,7 @@ rpcpassword=%s
 The username and password MUST NOT be the same.
 If the file does not exist, create it with owner-readable-only file permissions.
 It is also recommended to set alertnotify so you are notified of problems;
-for example: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.com
+for example: alertnotify=echo %%s | mail -s &quot;Macoin Alert&quot; admin@foo.com
 </source>
         <translation>%s, debe establecer un valor rpcpassword en el archivo de configuración:
 %s
@@ -3379,7 +3379,7 @@ rpcpassword=%s
 El nombre de usuario y la contraseña DEBEN NO ser iguales.
 Si el archivo no existe, créelo con permisos de archivo de solo lectura.
 Se recomienda también establecer alertnotify para recibir notificaciones de problemas.
-Por ejemplo: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.com
+Por ejemplo: alertnotify=echo %%s | mail -s &quot;Macoin Alert&quot; admin@foo.com
 </translation>
     </message>
     <message>
@@ -3399,8 +3399,8 @@ Por ejemplo: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+3"/>
-        <source>Cannot obtain a lock on data directory %s. Bitcoin is probably already running.</source>
-        <translation>No se puede bloquear el directorio de datos %s. Probablemente Bitcoin ya se está ejecutando.</translation>
+        <source>Cannot obtain a lock on data directory %s. Macoin is probably already running.</source>
+        <translation>No se puede bloquear el directorio de datos %s. Probablemente Macoin ya se está ejecutando.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3415,7 +3415,7 @@ Por ejemplo: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     <message>
         <location line="+3"/>
         <source>Error: The transaction was rejected! This might happen if some of the coins in your wallet were already spent, such as if you used a copy of wallet.dat and coins were spent in the copy but not marked as spent here.</source>
-        <translation>¡Error: se ha rechazado la transacción! Esto puede ocurrir si ya se han gastado algunos de los bitcoins del monedero, como ocurriría si hubiera hecho una copia de wallet.dat y se hubieran gastado bitcoins a partir de la copia, con lo que no se habrían marcado aquí como gastados.</translation>
+        <translation>¡Error: se ha rechazado la transacción! Esto puede ocurrir si ya se han gastado algunos de los macoins del monedero, como ocurriría si hubiera hecho una copia de wallet.dat y se hubieran gastado macoins a partir de la copia, con lo que no se habrían marcado aquí como gastados.</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -3444,8 +3444,8 @@ Por ejemplo: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+3"/>
-        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Bitcoin will not work properly.</source>
-        <translation>Precaución: Por favor, ¡revise que la fecha y hora de su ordenador son correctas! Si su reloj está mal, Bitcoin no funcionará correctamente.</translation>
+        <source>Warning: Please check that your computer&apos;s date and time are correct! If your clock is wrong Macoin will not work properly.</source>
+        <translation>Precaución: Por favor, ¡revise que la fecha y hora de su ordenador son correctas! Si su reloj está mal, Macoin no funcionará correctamente.</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3479,12 +3479,12 @@ Por ejemplo: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+1"/>
-        <source>Bitcoin Core Daemon</source>
-        <translation>Proceso Bitcoin Core</translation>
+        <source>Macoin Core Daemon</source>
+        <translation>Proceso Macoin Core</translation>
     </message>
     <message>
         <location line="+1"/>
-        <source>Bitcoin RPC client version</source>
+        <source>Macoin RPC client version</source>
         <translation>Versión de cliente BitcoinROC</translation>
     </message>
     <message>
@@ -3610,7 +3610,7 @@ Por ejemplo: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     <message>
         <location line="+1"/>
         <source>Failed to write to coin database</source>
-        <translation>No se ha podido escribir en la base de datos de bitcoins</translation>
+        <translation>No se ha podido escribir en la base de datos de macoins</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -3635,7 +3635,7 @@ Por ejemplo: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     <message>
         <location line="+1"/>
         <source>Generate coins (default: 0)</source>
-        <translation>Generar bitcoins (predeterminado: 0)</translation>
+        <translation>Generar macoins (predeterminado: 0)</translation>
     </message>
     <message>
         <location line="+2"/>
@@ -3689,8 +3689,8 @@ Por ejemplo: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+1"/>
-        <source>Send command to Bitcoin server</source>
-        <translation>Enviar comando a servidor Bitcoin</translation>
+        <source>Send command to Macoin server</source>
+        <translation>Enviar comando a servidor Macoin</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -3714,8 +3714,8 @@ Por ejemplo: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+1"/>
-        <source>Start Bitcoin server</source>
-        <translation>Iniciar servidor Bitcoin</translation>
+        <source>Start Macoin server</source>
+        <translation>Iniciar servidor Macoin</translation>
     </message>
     <message>
         <location line="+3"/>
@@ -3724,8 +3724,8 @@ Por ejemplo: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+10"/>
-        <source>Usage (deprecated, use bitcoin-cli):</source>
-        <translation>Uso (desaconsejado, usar bitcoin-cli)</translation>
+        <source>Usage (deprecated, use macoin-cli):</source>
+        <translation>Uso (desaconsejado, usar macoin-cli)</translation>
     </message>
     <message>
         <location line="+7"/>
@@ -3829,8 +3829,8 @@ Por ejemplo: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+9"/>
-        <source>SSL options: (see the Bitcoin Wiki for SSL setup instructions)</source>
-        <translation>Opciones SSL: (ver la Bitcoin Wiki para instrucciones de configuración SSL)</translation>
+        <source>SSL options: (see the Macoin Wiki for SSL setup instructions)</source>
+        <translation>Opciones SSL: (ver la Macoin Wiki para instrucciones de configuración SSL)</translation>
     </message>
     <message>
         <location line="+4"/>
@@ -4003,13 +4003,13 @@ Por ejemplo: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+1"/>
-        <source>Error loading wallet.dat: Wallet requires newer version of Bitcoin</source>
-        <translation>Error al cargar wallet.dat: El monedero requiere una versión más reciente de Bitcoin</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Macoin</source>
+        <translation>Error al cargar wallet.dat: El monedero requiere una versión más reciente de Macoin</translation>
     </message>
     <message>
         <location line="+99"/>
-        <source>Wallet needed to be rewritten: restart Bitcoin to complete</source>
-        <translation>El monedero ha necesitado ser reescrito. Reinicie Bitcoin para completar el proceso</translation>
+        <source>Wallet needed to be rewritten: restart Macoin to complete</source>
+        <translation>El monedero ha necesitado ser reescrito. Reinicie Macoin para completar el proceso</translation>
     </message>
     <message>
         <location line="-101"/>
@@ -4068,8 +4068,8 @@ Por ejemplo: alertnotify=echo %%s | mail -s &quot;Bitcoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="-32"/>
-        <source>Unable to bind to %s on this computer. Bitcoin is probably already running.</source>
-        <translation>No es posible conectar con %s en este sistema. Probablemente Bitcoin ya está ejecutándose.</translation>
+        <source>Unable to bind to %s on this computer. Macoin is probably already running.</source>
+        <translation>No es posible conectar con %s en este sistema. Probablemente Macoin ya está ejecutándose.</translation>
     </message>
     <message>
         <location line="+96"/>

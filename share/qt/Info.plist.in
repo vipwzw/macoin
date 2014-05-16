@@ -17,7 +17,7 @@
   <string>APPL</string>
 
   <key>CFBundleGetInfoString</key>
-  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@, Copyright © 2009-@COPYRIGHT_YEAR@ The Bitcoin Core developers</string>
+  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@, Copyright © 2009-@COPYRIGHT_YEAR@ The Macoin Core developers</string>
 
   <key>CFBundleShortVersionString</key>
   <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@</string>
@@ -43,7 +43,7 @@
       <string>org.bitcoin.BitcoinPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>bitcoin</string>
+        <string>macoin</string>
       </array>
     </dict>
   </array>
@@ -54,7 +54,7 @@
       <key>UTTypeIdentifier</key>
       <string>org.bitcoin.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>Bitcoin payment request</string>
+      <string>Macoin payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>

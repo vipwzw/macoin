@@ -117,7 +117,7 @@ AC_DEFUN([BITCOIN_QT_CONFIGURE],[
 
 
   dnl enable qt support
-  AC_MSG_CHECKING(whether to build Bitcoin Core GUI)
+  AC_MSG_CHECKING(whether to build Macoin Core GUI)
   BITCOIN_QT_CHECK([
     bitcoin_enable_qt=yes
     bitcoin_enable_qt_test=yes
@@ -363,7 +363,7 @@ AC_DEFUN([_BITCOIN_QT_FIND_LIBS_WITHOUT_PKGCONFIG],[
     fi
   ])
 
-  BITCOIN_QT_CHECK([
+  .BITCOIN_QT_CHECK([
     LIBS=
     if test x$qt_lib_path != x; then
       LIBS="-L$qt_lib_path"

@@ -56,7 +56,7 @@ def initialize_chain(test_dir):
     """
     Create (or copy from cache) a 200-block-long chain and
     4 wallets.
-    bitcoind and bitcoin-cli must be in search path.
+    macoind and macoin-cli must be in search path.
     """
 
     if not os.path.isdir(os.path.join("cache", "node0")):
@@ -65,17 +65,17 @@ def initialize_chain(test_dir):
         for i in range(4):
             datadir = os.path.join("cache", "node"+str(i))
             os.makedirs(datadir)
-            with open(os.path.join(datadir, "bitcoin.conf"), 'w') as f:
+            with open(os.path.join(datadir, "macoin.conf"), 'w') as f:
                 f.write("regtest=1\n");
                 f.write("rpcuser=rt\n");
                 f.write("rpcpassword=rt\n");
                 f.write("port="+str(START_P2P_PORT+i)+"\n");
                 f.write("rpcport="+str(START_RPC_PORT+i)+"\n");
-            args = [ "bitcoind", "-keypool=1", "-datadir="+datadir ]
+            args = [ "macoind", "-keypool=1", "-datadir="+datadir ]
             if i > 0:
                 args.append("-connect=127.0.0.1:"+str(START_P2P_PORT))
             bitcoinds.append(subprocess.Popen(args))
-            subprocess.check_output([ "bitcoin-cli", "-datadir="+datadir,
+            subprocess.check_output([ "macoin-cli", "-datadir="+datadir,
                                       "-rpcwait", "getblockcount"])
 
         rpcs = []
@@ -112,9 +112,9 @@ def start_nodes(num_nodes, dir):
     # Start bitcoinds, and wait for RPC interface to be up and running:
     for i in range(num_nodes):
         datadir = os.path.join(dir, "node"+str(i))
-        args = [ "bitcoind", "-datadir="+datadir ]
+        args = [ "macoind", "-datadir="+datadir ]
         bitcoind_processes.append(subprocess.Popen(args))
-        subprocess.check_output([ "bitcoin-cli", "-datadir="+datadir,
+        subprocess.check_output([ "macoin-cli", "-datadir="+datadir,
                                   "-rpcwait", "getblockcount"])
     # Create&return JSON-RPC connections
     rpc_connections = []

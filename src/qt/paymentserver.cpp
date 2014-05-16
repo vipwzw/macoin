@@ -1,4 +1,4 @@
-// Copyright (c) 2011-2013 The Bitcoin developers
+// Copyright (c) 2011-2013 The Macoin developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -47,7 +47,7 @@
 using namespace boost;
 
 const int BITCOIN_IPC_CONNECT_TIMEOUT = 1000; // milliseconds
-const QString BITCOIN_IPC_PREFIX("bitcoin:");
+const QString BITCOIN_IPC_PREFIX("macoin:");
 const char* BITCOIN_REQUEST_MIMETYPE = "application/bitcoin-paymentrequest";
 const char* BITCOIN_PAYMENTACK_MIMETYPE = "application/bitcoin-paymentack";
 const char* BITCOIN_PAYMENTACK_CONTENTTYPE = "application/bitcoin-payment";
@@ -69,7 +69,7 @@ void PaymentServer::freeCertStore()
 //
 static QString ipcServerName()
 {
-    QString name("BitcoinQt");
+    QString name("MacoinQt");
 
     // Append a simple hash of the datadir
     // Note that GetDataDir(true) returns a different path
@@ -414,7 +414,7 @@ void PaymentServer::handleURIOrFile(const QString& s)
                 emit receivedPaymentRequest(recipient);
             else
                 emit message(tr("URI handling"),
-                    tr("URI can not be parsed! This can be caused by an invalid Bitcoin address or malformed URI parameters."),
+                    tr("URI can not be parsed! This can be caused by an invalid Macoin address or malformed URI parameters."),
                     CClientUIInterface::ICON_WARNING);
 
             return;
@@ -498,7 +498,7 @@ bool PaymentServer::processPaymentRequest(PaymentRequestPlus& request, SendCoins
             addresses.append(QString::fromStdString(CBitcoinAddress(dest).ToString()));
         }
         else if (!recipient.authenticatedMerchant.isEmpty()){
-            // Insecure payments to custom bitcoin addresses are not supported
+            // Insecure payments to custom macoin addresses are not supported
             // (there is no good way to tell the user where they are paying in a way
             // they'd have a chance of understanding).
             emit message(tr("Payment request error"),

@@ -122,6 +122,11 @@ private:
 };
 
 std::string HTTPPost(const std::string& strMsg, const std::map<std::string,std::string>& mapRequestHeaders);
+
+std::string HTTPGetUrl(const std::string& host, const std::string& url, const std::map<std::string,std::string>& params, const std::map<std::string,std::string>& mapRequestHeaders);
+
+std::string HTTPPostUrl(const std::string& host, const std::string& url, const std::map<std::string,std::string>& params, const std::map<std::string,std::string>& mapRequestHeaders);
+
 std::string HTTPReply(int nStatus, const std::string& strMsg, bool keepalive);
 bool ReadHTTPRequestLine(std::basic_istream<char>& stream, int &proto,
                          std::string& http_method, std::string& http_uri);

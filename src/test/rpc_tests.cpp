@@ -103,6 +103,35 @@ BOOST_AUTO_TEST_CASE(rpc_rawsign)
     BOOST_CHECK(find_value(r.get_obj(), "complete").get_bool() == true);
 }
 
+BOOST_AUTO_TEST_CASE(http_get)
+{
+    map<string,string> emptymap;
+    Object r = CallHTTP("zc.macoin.org", "/api/user/info", "GET", emptymap, emptymap, true);
+    BOOST_CHECK(find_value(r,  "error").get_str() == "error token");
+}
+
+BOOST_AUTO_TEST_CASE(api_addmultisigaddress)
+{
+    //OAuth2::enableDebug();
+    OAuth2::login("cykzl@vip.qq.com", "182764125");
+    Value addrvalue = CallRPC("getnewaddress");
+    BOOST_CHECK(addrvalue.type() == str_type);
+    string addr = addrvalue.get_str();
+    const Object addrinfo = CallRPC(string("validateaddress ") + addr).get_obj();
+    const string pubkey = find_value(addrinfo, "pubkey").get_str();
+    const Object multiinfo = Macoin::addmultisigaddress(pubkey);
+    BOOST_CHECK(find_value(multiinfo,  "error").type() == null_type);
+    const string pubkey1 = "\"" + find_value(multiinfo, "pubkey1").get_str() + "\"";
+    const string pubkey2 = "\"" + find_value(multiinfo, "pubkey2").get_str() + "\"";
+    const string multiaddr = find_value(multiinfo, "addr").get_str();
+    const string multisigwallet = CallRPC(string("addmultisigaddress 2 ") + "["+pubkey1+","+pubkey2+"]" + " macoin_validate_wallet").get_str();
+    BOOST_CHECK(multiaddr == multisigwallet);
+}
+
+BOOST_AUTO_TEST_CASE(api_createrawtransaction)
+{
+}
+
 BOOST_AUTO_TEST_CASE(rpc_format_monetary_values)
 {
     BOOST_CHECK(write_string(ValueFromAmount(0LL), false) == "0.00000000");

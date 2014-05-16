@@ -20,6 +20,13 @@
 #include <boost/lexical_cast.hpp>
 #include <boost/shared_ptr.hpp>
 #include "json/json_spirit_writer_template.h"
+#include <boost/function_output_iterator.hpp>
+#include <boost/bind.hpp>
+#include <algorithm>
+#include <sstream>
+#include <iostream>
+#include <iterator>
+#include <iomanip>
 
 using namespace std;
 using namespace boost;
@@ -47,6 +54,84 @@ string HTTPPost(const string& strMsg, const map<string,string>& mapRequestHeader
         s << item.first << ": " << item.second << "\r\n";
     s << "\r\n" << strMsg;
 
+    return s.str();
+}
+
+#include <boost/function_output_iterator.hpp>
+#include <boost/bind.hpp>
+#include <algorithm>
+#include <sstream>
+#include <iostream>
+#include <iterator>
+#include <iomanip>
+
+namespace {
+  std::string encimpl(std::string::value_type v) {
+    if (isalnum(v))
+      return std::string()+v;
+
+    std::ostringstream enc;
+    enc << '%' << std::setw(2) << std::setfill('0') << std::hex << std::uppercase << int(static_cast<unsigned char>(v));
+    return enc.str();
+  }
+}
+
+std::string urlencode(const std::string& url) {
+  // Find the start of the query string
+  const std::string::const_iterator start = std::find(url.begin(), url.end(), '?');
+
+  // If there isn't one there's nothing to do!
+  if (start == url.end())
+    return url;
+
+  // store the modified query string
+  std::string qstr;
+
+  std::transform(start+1, url.end(),
+                 // Append the transform result to qstr
+                 boost::make_function_output_iterator(boost::bind(static_cast<std::string& (std::string::*)(const std::string&)>(&std::string::append),&qstr,_1)),
+                 encimpl);
+  return std::string(url.begin(), start+1) + qstr;
+}
+
+
+string HTTPPostUrl(const string& host, const string& url, const map<string,string>& params, const map<string,string>& mapRequestHeaders)
+{
+    ostringstream sp;
+    BOOST_FOREACH(const PAIRTYPE(string, string)& item, params)
+        sp << item.first << "=" << urlencode(item.second) << "&";
+    sp << "__from=bitcoin-http-request";
+    ostringstream s;
+    s << "POST " << url << " HTTP/1.1\r\n"
+      << "User-Agent: bitcoin-http-client/" << FormatFullVersion() << "\r\n"
+      << "Host: " << host << "\r\n"
+      << "Content-Type: application/x-www-form-urlencoded\r\n"
+      << "Content-Length: " << sp.str().size() << "\r\n"
+      << "Connection: close\r\n"
+      << "Accept: application/json\r\n";
+    BOOST_FOREACH(const PAIRTYPE(string, string)& item, mapRequestHeaders)
+        s << item.first << ": " << item.second << "\r\n";
+    s << "\r\n" << sp.str();
+
+    return s.str();
+}
+
+string HTTPGetUrl(const string& host, const string& url, const map<string,string>& params, const map<string,string>& mapRequestHeaders)
+{
+    ostringstream sp;
+    sp << url << "?";
+    BOOST_FOREACH(const PAIRTYPE(string, string)& item, params)
+        sp << item.first << "=" << urlencode(item.second) << "&";
+    sp << "__from=bitcoin-http-request";
+    ostringstream s;
+    s << "GET " << url << " HTTP/1.1\r\n"
+      << "User-Agent: bitcoin-http-client/" << FormatFullVersion() << "\r\n"
+      << "Host: " << host << "\r\n"
+      << "Connection: close\r\n"
+      << "Accept: application/json\r\n";
+    BOOST_FOREACH(const PAIRTYPE(string, string)& item, mapRequestHeaders)
+        s << item.first << ": " << item.second << "\r\n";
+    s << "\r\n";
     return s.str();
 }
 

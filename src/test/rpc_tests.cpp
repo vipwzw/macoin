@@ -134,6 +134,9 @@ BOOST_AUTO_TEST_CASE(api_addmultisigaddress)
 
 BOOST_AUTO_TEST_CASE(api_createrawtransaction)
 {
+   // OAuth2::enableDebug();
+    OAuth2::login("niniwzw@qq.com", "521414milgr");
+    const Object rawinfo = Macoin::createrawtransaction("3LfCVwkDgWUG3KMyZSXXsw8y8jZhFb991X", "10.0", "0", "all");
 }
 
 BOOST_AUTO_TEST_CASE(rpc_format_monetary_values)

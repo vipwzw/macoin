@@ -1986,6 +1986,11 @@ Address: %4
         <translation>标签(&amp;L)：</translation>
     </message>
     <message>
+        <location line="165"/>
+        <source>user info</source>
+        <translation>用户基本信息</translation>
+    </message>
+    <message>
         <location line="-34"/>
         <source>&amp;Message:</source>
         <translation>消息(&amp;M)：</translation>
@@ -2033,6 +2038,16 @@ Address: %4
         <translation>用户名称</translation>
     </message>
     <message>
+        <location line="182"/>
+        <source>address book</source>
+        <translation>地址簿</translation>
+    </message>
+    <message>
+        <location line="182"/>
+        <source>address book</source>
+        <translation>地址簿</translation>
+    </message>
+    <message>
         <location line="+14"/>
         <source>UID:</source>
         <translation>UID:</translation>
@@ -2060,9 +2075,13 @@ Address: %4
     <message>
         <location line="332"/>
         <source>&amp;Subscription</source>
-        <translation>实名订购</translation>
+        <translation>申请实名地址</translation>
     </message>
-
+    <message>
+        <location line="361"/>
+        <source>&amp;Logout</source>
+        <translation>登出</translation>
+    </message>
     <message>
         <location line="-17"/>
         <source>Reuse one of the previously used receiving addresses. Reusing addresses has security and privacy issues. Do not use this unless re-generating a payment request made before.</source>
@@ -2268,6 +2287,11 @@ Address: %4
         <location line="+89"/>
         <source>Quantity:</source>
         <translation>总量：</translation>
+    </message>
+    <message>
+        <location line="216"/>
+        <source>Address.</source>
+        <translation>实名地址</translation>
     </message>
     <message>
         <location line="+35"/>

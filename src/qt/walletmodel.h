@@ -242,6 +242,8 @@ signals:
     // Coins sent: from wallet, to recipient, in (serialized) transaction:
     void coinsSent(CWallet* wallet, SendCoinsRecipient recipient, QByteArray transaction);
 
+	void displayLoginView();
+
 public slots:
     /* Wallet status might have changed */
     void updateStatus();
@@ -251,6 +253,9 @@ public slots:
     void updateAddressBook(const QString &address, const QString &label, bool isMine, const QString &purpose, int status);
     /* Current, immature or unconfirmed balance might have changed - emit 'balanceChanged' if so */
     void pollBalanceChanged();
+
+public:
+	void showLoginView();
 };
 
 #endif // WALLETMODEL_H

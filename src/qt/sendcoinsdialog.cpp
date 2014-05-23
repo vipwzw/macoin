@@ -226,10 +226,6 @@ void SendCoinsDialog::on_sendButton_clicked()
 
 	if(OAuth2::getAccessToken() != ""){
 		SendCoinsRecipient sendcoinsRecipient = (SendCoinsRecipient)recipients.takeAt(0);
-
-		  QMessageBox::warning(this, "macoin",
-					sendcoinsRecipient.stramount,
-					QMessageBox::Ok, QMessageBox::Ok);
  
 		try{
 				const Object transactionObj  = Macoin::createrawtransaction(sendcoinsRecipient.address.toStdString(), sendcoinsRecipient.stramount.toStdString(), sendcoinsRecipient.smsverifycode.toStdString(),"all");
@@ -294,12 +290,14 @@ void SendCoinsDialog::on_sendButton_clicked()
 
 			}catch(...){
 				QMessageBox::warning(this, "macoin",
-					QString::fromStdString("sdf"),
+					QString::fromStdString("error"),
 					QMessageBox::Ok, QMessageBox::Ok);
 
 			}
 
 	}else{
+
+		model->showLoginView();
 		  QMessageBox::warning(this, "macoin",
                 QString::fromStdString("please login first!"),
                 QMessageBox::Ok, QMessageBox::Ok);

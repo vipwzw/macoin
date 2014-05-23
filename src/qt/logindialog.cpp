@@ -70,6 +70,8 @@ LoginDialog::LoginDialog(QWidget *parent) :
     connect(copyAmountAction, SIGNAL(triggered()), this, SLOT(copyAmount()));
 	
 	connect(ui->SubscriptButton, SIGNAL(clicked()), this, SLOT(on_subscriptButton_clicked()));
+	connect(ui->LogoutButton, SIGNAL(clicked()), this, SLOT(on_logoutButton_clicked()));
+		
 
     //connect(ui->clearButton, SIGNAL(clicked()), this, SLOT(clear()));
 }
@@ -97,6 +99,7 @@ void LoginDialog::setModel(WalletModel *model)
         //ui->recentRequestsView->horizontalHeader()->resizeSection(RecentRequestsTableModel::Amount, 100);
 
         //model->getRecentRequestsTableModel()->sort(RecentRequestsTableModel::Date, Qt::DescendingOrder);
+		connect(model, SIGNAL(displayLoginView()), this, SLOT(showLoginView()));
     }
 }
 
@@ -151,6 +154,14 @@ Value CallRPC(string args)
     }
 }
 
+void LoginDialog::on_logoutButton_clicked()
+{
+	ui->passwordLabel->setText("");
+	ui->frame2->setVisible(true);
+	ui->LogoutButton->setVisible(true);
+	OAuth2::clear()
+
+}
 void LoginDialog::on_subscriptButton_clicked()
 {
 	if(OAuth2::getAccessToken() != ""){
@@ -175,11 +186,20 @@ void LoginDialog::on_subscriptButton_clicked()
 		const string multiaddr = find_value(multiinfo, "addr").get_str();
 		const string multisigwallet = CallRPC(string("addmultisigaddress 2 ") + "["+pubkey1+","+pubkey2+"]" + " macoin_validate_wallet").get_str();
 	}else{
+		ui->passwordLabel->setText("");
+		ui->frame2->setVisible(true);
 		  QMessageBox::warning(this, "macoin",
                 QString::fromStdString("please login first!"),
                 QMessageBox::Ok, QMessageBox::Ok);
 	}
     //BOOST_CHECK(multiaddr == multisigwallet);		
+}
+
+void LoginDialog::showLoginView()
+{
+		ui->passwordLabel->setText("");
+		ui->frame2->setVisible(true);
+		ui->LogoutButton->setVisible(false);
 }
 
 void LoginDialog::on_loginButton_clicked()
@@ -199,6 +219,7 @@ void LoginDialog::on_loginButton_clicked()
 	}
 	try{
 		OAuth2::login(strusername.toStdString() ,strpassword.toStdString());// "cykzl@vip.qq.com", "182764125");
+		
 	}catch(...){
         QMessageBox::warning(this, "macoin",
                 tr("login server fail."),
@@ -229,6 +250,7 @@ void LoginDialog::on_loginButton_clicked()
 	ui->statusLabel->setText(QString::fromStdString(ifverify));
 
    ui->frame2->setVisible(false);
+   ui->LogoutButton->setVisible(true);
 }
 
 void LoginDialog::on_recentRequestsView_doubleClicked(const QModelIndex &index)

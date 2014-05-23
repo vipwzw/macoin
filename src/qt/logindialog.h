@@ -40,6 +40,7 @@ public slots:
 protected:
     virtual void keyPressEvent(QKeyEvent *event);
 
+
 private:
     Ui::LoginDialog *ui;
     WalletModel *model;
@@ -48,6 +49,7 @@ private:
 
 private slots:
     void on_loginButton_clicked();
+	void on_logoutButton_clicked();
 	void on_subscriptButton_clicked();
     void on_showRequestButton_clicked();
     void on_removeRequestButton_clicked();
@@ -57,6 +59,10 @@ private slots:
     void copyLabel();
     void copyMessage();
     void copyAmount();
+
+	void showLoginView();
+signals:
+    void displayLoginView();
 };
 
 #endif // LOGINDIALOG_H

@@ -14,6 +14,17 @@
 #include <QApplication>
 #include <QClipboard>
 
+ 
+#include "rpcserver.h"
+#include "rpcclient.h"
+
+#include "base58.h"
+
+#include <boost/algorithm/string.hpp>
+
+using namespace std;
+using namespace json_spirit;
+
 SendCoinsEntry::SendCoinsEntry(QWidget *parent) :
     QStackedWidget(parent),
     ui(new Ui::SendCoinsEntry),
@@ -76,6 +87,7 @@ void SendCoinsEntry::setModel(WalletModel *model)
     connect(ui->deleteButton, SIGNAL(clicked()), this, SLOT(deleteClicked()));
     connect(ui->deleteButton_is, SIGNAL(clicked()), this, SLOT(deleteClicked()));
     connect(ui->deleteButton_s, SIGNAL(clicked()), this, SLOT(deleteClicked()));
+	//connect(ui->checkButton , SIGNAL(clicked()), this, SLOT(SMSCheck()));
 
     clear();
 }
@@ -105,6 +117,38 @@ void SendCoinsEntry::clear()
 void SendCoinsEntry::deleteClicked()
 {
     emit removeEntry(this);
+}
+
+void SendCoinsEntry::on_checkButton_clicked()
+{
+	if(OAuth2::getAccessToken() != ""){
+		try{
+			const Object reto = Macoin::sendRandCode();
+			
+			Value errorObj = find_value(reto,  "error");
+			if (errorObj.type() == null_type)
+			{
+				QMessageBox::warning(this, "macoin",
+					"sms sending complete!",
+					QMessageBox::Ok, QMessageBox::Ok);
+				return ;
+			}
+			const string strerror = errorObj.get_str(); 
+			  QMessageBox::warning(this, "macoin",
+					QString::fromStdString(strerror),
+					QMessageBox::Ok, QMessageBox::Ok);
+			
+		}catch(QString exception){
+			QMessageBox::warning(this, "macoin",
+                exception,
+                QMessageBox::Ok, QMessageBox::Ok);
+		}
+			return ;
+	}else{
+		  QMessageBox::warning(this, "macoin",
+                QString::fromStdString("please login first!"),
+                QMessageBox::Ok, QMessageBox::Ok);
+	}
 }
 
 bool SendCoinsEntry::validate()
@@ -150,7 +194,8 @@ SendCoinsRecipient SendCoinsEntry::getValue()
     recipient.label = ui->addAsLabel->text();
     recipient.amount = ui->payAmount->value();
     recipient.message = ui->messageTextLabel->text();
-
+    recipient.smsverifycode = ui->checkSMS->text();
+	recipient.stramount = ui->payAmount->text();
     return recipient;
 }
 

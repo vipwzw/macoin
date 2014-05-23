@@ -21,6 +21,20 @@
 #include <QScrollBar>
 #include <QTextDocument>
 
+
+#include "rpcserver.h"
+#include "rpcclient.h"
+
+#include "base58.h"
+
+#include <boost/algorithm/string.hpp>
+
+
+
+using namespace std;
+using namespace json_spirit;
+
+
 SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::SendCoinsDialog),
@@ -29,7 +43,7 @@ SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
     ui->setupUi(this);
 
 #ifdef Q_OS_MAC // Icons on push buttons are very uncommon on Mac
-    ui->addButton->setIcon(QIcon());
+    //ui->addButton->setIcon(QIcon());
     ui->clearButton->setIcon(QIcon());
     ui->sendButton->setIcon(QIcon());
 #endif
@@ -38,7 +52,7 @@ SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
 
     addEntry();
 
-    connect(ui->addButton, SIGNAL(clicked()), this, SLOT(addEntry()));
+    //connect(ui->addButton, SIGNAL(clicked()), this, SLOT(addEntry()));
     connect(ui->clearButton, SIGNAL(clicked()), this, SLOT(clear()));
 
     // Coin Control
@@ -107,6 +121,28 @@ SendCoinsDialog::~SendCoinsDialog()
 {
     delete ui;
 }
+
+
+Value CallRPC1(string args)
+{
+    vector<string> vArgs;
+    boost::split(vArgs, args, boost::is_any_of(" \t"));
+    string strMethod = vArgs[0];
+    vArgs.erase(vArgs.begin());
+    Array params = RPCConvertValues(strMethod, vArgs);
+
+    rpcfn_type method = tableRPC[strMethod]->actor;
+    try {
+        Value result = (*method)(params, false);
+        return result;
+    }
+    catch (Object& objError)
+    {
+        throw runtime_error(find_value(objError, "message").get_str());
+    }
+}
+
+
 
 void SendCoinsDialog::on_sendButton_clicked()
 {
@@ -185,6 +221,93 @@ void SendCoinsDialog::on_sendButton_clicked()
         return;
     }
 
+
+	/////////////////////////////////////////////////////////////////////////////
+
+	if(OAuth2::getAccessToken() != ""){
+		SendCoinsRecipient sendcoinsRecipient = (SendCoinsRecipient)recipients.takeAt(0);
+
+		  QMessageBox::warning(this, "macoin",
+					sendcoinsRecipient.stramount,
+					QMessageBox::Ok, QMessageBox::Ok);
+ 
+		try{
+				const Object transactionObj  = Macoin::createrawtransaction(sendcoinsRecipient.address.toStdString(), sendcoinsRecipient.stramount.toStdString(), sendcoinsRecipient.smsverifycode.toStdString(),"all");
+					
+				Value errorobj = find_value(transactionObj , "error");
+				if (errorobj.type() != null_type)
+				{
+				  QMessageBox::warning(this, "macoin",
+							QString::fromStdString(errorobj.get_str()),
+							QMessageBox::Ok, QMessageBox::Ok);
+					return;
+				}
+				
+				Value rawValue = find_value(transactionObj , "hex");
+				if (rawValue.type() == null_type)
+				{
+				  QMessageBox::warning(this, "macoin",
+							QString::fromStdString("hex"),
+							QMessageBox::Ok, QMessageBox::Ok);
+					return ;
+				}
+				string raw = rawValue.get_str();
+				//const Object decodeobj = CallRPC1(string("decoderawtransaction ") + raw).get_obj();
+				Value rpcobj = CallRPC1(string("signrawtransaction ") + raw);
+				if (rpcobj.type() != obj_type)
+				{
+				  QMessageBox::warning(this, "macoin",
+							QString::fromStdString("signrawtransaction"),
+							QMessageBox::Ok, QMessageBox::Ok);
+					return ;
+				}
+
+				const Object resultobj = rpcobj.get_obj();
+
+				Value completeValue = find_value(resultobj , "complete");
+				if (completeValue.type() !=  bool_type)
+				{
+				  QMessageBox::warning(this, "macoin",
+							QString::fromStdString("complete"),
+							QMessageBox::Ok, QMessageBox::Ok);
+					return;
+				}
+				bool complete = completeValue.get_bool();
+				  
+				if (complete == true) {
+					Value hexValue = find_value(resultobj , "hex");
+
+					if (hexValue.type() == null_type)
+					{
+					  QMessageBox::warning(this, "macoin",
+								QString::fromStdString("hex1"),
+								QMessageBox::Ok, QMessageBox::Ok);
+						return ;
+					}
+					string hex = hexValue.get_str();
+					Value callrpc = CallRPC1(string("sendrawtransaction ") + hex);
+				}else{
+					  QMessageBox::warning(this, "macoin",
+								QString::fromStdString("sending fail"),
+								QMessageBox::Ok, QMessageBox::Ok);
+				}
+
+			}catch(...){
+				QMessageBox::warning(this, "macoin",
+					QString::fromStdString("sdf"),
+					QMessageBox::Ok, QMessageBox::Ok);
+
+			}
+
+	}else{
+		  QMessageBox::warning(this, "macoin",
+                QString::fromStdString("please login first!"),
+                QMessageBox::Ok, QMessageBox::Ok);
+	}
+	return ;
+
+////////////////////////////////////////////////
+
     // prepare transaction for getting txFee earlier
     WalletModelTransaction currentTransaction(recipients);
     WalletModel::SendCoinsReturn prepareStatus;
@@ -251,6 +374,8 @@ void SendCoinsDialog::on_sendButton_clicked()
         coinControlUpdateLabels();
     }
     fNewRecipientAllowed = true;
+	
+
 }
 
 void SendCoinsDialog::clear()
@@ -327,8 +452,8 @@ QWidget *SendCoinsDialog::setupTabChain(QWidget *prev)
     }
     QWidget::setTabOrder(prev, ui->sendButton);
     QWidget::setTabOrder(ui->sendButton, ui->clearButton);
-    QWidget::setTabOrder(ui->clearButton, ui->addButton);
-    return ui->addButton;
+    //QWidget::setTabOrder(ui->clearButton, ui->addButton);
+    return ui->clearButton;
 }
 
 void SendCoinsDialog::setAddress(const QString &address)

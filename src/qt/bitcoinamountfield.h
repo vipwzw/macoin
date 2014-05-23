@@ -62,6 +62,7 @@ private:
     qint64 nSingleStep;
 
     void setText(const QString &text);
+public:
     QString text() const;
 
 private slots:

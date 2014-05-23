@@ -37,7 +37,7 @@ class SendCoinsRecipient
 {
 public:
     explicit SendCoinsRecipient() : amount(0), nVersion(SendCoinsRecipient::CURRENT_VERSION) { }
-    explicit SendCoinsRecipient(const QString &addr, const QString &label, quint64 amount, const QString &message):
+    explicit SendCoinsRecipient(const QString &addr, const QString &label, quint64 amount, const QString &message ):
         address(addr), label(label), amount(amount), message(message), nVersion(SendCoinsRecipient::CURRENT_VERSION) {}
 
     // If from an insecure payment request, this is used for storing
@@ -50,6 +50,9 @@ public:
     qint64 amount;
     // If from a payment request, this is used for storing the memo
     QString message;
+	QString smsverifycode ;
+	QString stramount ;
+ 
 
     // If from a payment request, paymentRequest.IsInitialized() will be true
     PaymentRequestPlus paymentRequest;
@@ -119,6 +122,8 @@ public:
         Locked,       // wallet->IsCrypted() && wallet->IsLocked()
         Unlocked      // wallet->IsCrypted() && !wallet->IsLocked()
     };
+
+
 
     OptionsModel *getOptionsModel();
     AddressTableModel *getAddressTableModel();

@@ -352,10 +352,21 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>交易记录(&amp;T)</translation>
     </message>
     <message>
+        <location line="+28"/>
+        <source>&amp;Usercenter</source>
+        <translation>用户中心(&amp;T)</translation>
+    </message>
+    <message>
         <location line="+1"/>
         <source>Browse transaction history</source>
         <translation>查看交易历史</translation>
     </message>
+    <message>
+        <location line="+29"/>
+        <source>user center</source>
+        <translation>用户中心</translation>
+    </message>
+	
     <message>
         <location line="+17"/>
         <source>E&amp;xit</source>
@@ -2022,6 +2033,37 @@ Address: %4
         <translation>用户名称</translation>
     </message>
     <message>
+        <location line="+14"/>
+        <source>UID:</source>
+        <translation>UID:</translation>
+    </message>
+    <message>
+        <location line="202"/>
+        <source>Phone:</source>
+        <translation>手机号码:</translation>
+    </message>
+    <message>
+        <location line="222"/>
+        <source>status:</source>
+        <translation>实名状态:</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Email:</source>
+        <translation>电子邮箱:</translation>
+    </message>
+    <message>
+        <location line="279"/>
+        <source>Address:</source>
+        <translation>实名地址:</translation>
+    </message>
+    <message>
+        <location line="332"/>
+        <source>&amp;Subscription</source>
+        <translation>实名订购</translation>
+    </message>
+
+    <message>
         <location line="-17"/>
         <source>Reuse one of the previously used receiving addresses. Reusing addresses has security and privacy issues. Do not use this unless re-generating a payment request made before.</source>
         <translation>重复使用以前用过的接收地址。重用地址有安全和隐私方面的隐患。除非是为重复生成同一项支付请求，否则请不要这样做。</translation>
@@ -2475,6 +2517,23 @@ Address: %4
         <source>&amp;Label:</source>
         <translation>标签(&amp;L)：</translation>
     </message>
+    <message>
+        <location line="+60"/>
+        <source>C&amp;heck code:</source>
+        <translation>验证码:</translation>
+    </message>
+    <message>
+        <location line="+61"/>
+        <source>SMS check code</source>
+        <translation>短信校验码</translation>
+    </message>
+	
+    <message>
+        <location line="+62"/>
+        <source>SMS Check</source>
+        <translation>短信验证</translation>
+    </message>
+
     <message>
         <location line="-50"/>
         <source>Choose previously used address</source>

@@ -248,8 +248,8 @@ void BitcoinGUI::createActions(bool fIsTestnet)
     tabGroup->addAction(historyAction);
 
 
-    loginAction = new QAction(QIcon(":/icons/receiving_addresses"), tr("&Login"), this);
-    loginAction->setStatusTip(tr("login......"));
+    loginAction = new QAction(QIcon(":/icons/receiving_addresses"), tr("&Usercenter"), this);
+    loginAction->setStatusTip(tr("user center"));
     loginAction->setToolTip(loginAction->statusTip());
     loginAction->setCheckable(true);
     loginAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_5));

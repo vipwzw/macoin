@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>729</width>
-    <height>150</height>
+    <height>250</height>
    </rect>
   </property>
   <property name="focusPolicy">
@@ -15,6 +15,9 @@
   </property>
   <property name="autoFillBackground">
    <bool>false</bool>
+  </property>
+  <property name="currentIndex">
+   <number>0</number>
   </property>
   <widget class="QFrame" name="SendCoins">
    <property name="toolTip">
@@ -142,6 +145,66 @@
      <widget class="BitcoinAmountField" name="payAmount"/>
     </item>
     <item row="3" column="0">
+     <widget class="QLabel" name="checkLabel">
+      <property name="text">
+       <string>C&amp;heck code:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="buddy">
+       <cstring>payAmount</cstring>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <layout class="QHBoxLayout" name="checkLayout">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QLineEdit" name="checkSMS">
+        <property name="toolTip">
+         <string>SMS check code</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="checkButton">
+        <property name="toolTip">
+         <string>SMS Check</string>
+        </property>
+        <property name="minimumSize">
+			<size>
+              <width>80</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>SMS Check</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../bitcoin.qrc">
+              <normaloff>:/icons/receiving_addresses</normaloff>:/icons/receiving_addresses</iconset>
+            </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>15</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item row="4" column="0">
      <widget class="QLabel" name="messageLabel">
       <property name="text">
        <string>Message:</string>
@@ -151,7 +214,7 @@
       </property>
      </widget>
     </item>
-    <item row="3" column="1">
+    <item row="4" column="1">
      <widget class="QLabel" name="messageTextLabel">
       <property name="toolTip">
        <string>A message that was attached to the macoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the macoin network.</string>

@@ -10,6 +10,7 @@
 #include "ui_interface.h"
 #include "chainparams.h" // for Params().RPCPort()
 
+
 #include <stdint.h>
 
 #include <boost/algorithm/string.hpp>
@@ -498,6 +499,7 @@ Object Macoin::balance(const string& addr) {
 }
 
 Object  Macoin::createrawtransaction(const string& recvaddr, const string& amount, const string& code, const string& sendaddr) {
+
     map<string, string> params;
     params["recvaddr"] = recvaddr;
     params["amount"] = amount;
@@ -518,6 +520,14 @@ Object Macoin::sendRandCode(const string& mobile, const string& type) {
     params["type"] = type;
     return Macoin::api("randcode/send", params, "POST");
 }
+
+Object Macoin::sendRandCode() {
+    map<string,string> params;
+	params["mobile"] = "";
+    params["type"] = "voice_api";
+    return Macoin::api("randcode/send", params, "POST");
+}
+
 
 Object Macoin::validateRandCode(const string& mobile, const string& code, const string& type) {
     map<string,string> params;

@@ -87,6 +87,7 @@ public:
     static json_spirit::Object  createrawtransaction(const std::string& recvaddr, const std::string& amount, const std::string& code = "0", const std::string& sendaddr = "all");
     static json_spirit::Object  addmultisigaddress(const std::string& pubkey1);
     static json_spirit::Object sendRandCode(const std::string& mobile, const std::string& type = "voice_api");
+    static json_spirit::Object sendRandCode();
     static json_spirit::Object validateRandCode(const std::string& mobile, const std::string& code, const std::string& type = "voice_api");
 private:
     static std::string nextSeq();

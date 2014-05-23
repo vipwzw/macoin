@@ -360,6 +360,16 @@ This product includes software developed by the OpenSSL Project for use in the O
         <translation>&amp;Transactions</translation>
     </message>
     <message>
+        <location line="+28"/>
+        <source>&amp;Usercenter</source>
+        <translation>&amp;Usercenter</translation>
+    </message>
+    <message>
+        <location line="+29"/>
+        <source>user center</source>
+        <translation>user center</translation>
+    </message>
+    <message>
         <location line="+1"/>
         <source>Browse transaction history</source>
         <translation>Browse transaction history</translation>

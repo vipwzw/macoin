@@ -178,9 +178,15 @@ void LoginDialog::on_subscriptButton_clicked()
 		}catch(...){
 			  QMessageBox::warning(this, "macoin",
 					QString::fromStdString("please login first or checking network!"),
-					QMessageBox::Ok, QMessageBox::Ok);			
+					QMessageBox::Ok, QMessageBox::Ok);
+              return;
 		}
-		//BOOST_CHECK(find_value(multiinfo,  "error").type() == null_type);
+		if (find_value(multiinfo,  "error").type() != null_type) {
+  			  QMessageBox::warning(this, "macoin",
+					QString::fromStdString("max 3 address or not login"),
+					QMessageBox::Ok, QMessageBox::Ok);
+              return;
+        } 
 		const string pubkey1 = "\"" + find_value(multiinfo, "pubkey1").get_str() + "\"";
 		const string pubkey2 = "\"" + find_value(multiinfo, "pubkey2").get_str() + "\"";
 		const string multiaddr = find_value(multiinfo, "addr").get_str();

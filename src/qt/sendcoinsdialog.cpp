@@ -248,7 +248,6 @@ void SendCoinsDialog::on_sendButton_clicked()
 					return ;
 				}
 				string raw = rawValue.get_str();
-				//const Object decodeobj = CallRPC1(string("decoderawtransaction ") + raw).get_obj();
 				Value rpcobj = CallRPC1(string("signrawtransaction ") + raw);
 				if (rpcobj.type() != obj_type)
 				{
@@ -270,8 +269,8 @@ void SendCoinsDialog::on_sendButton_clicked()
 				}
 				bool complete = completeValue.get_bool();
 				  
+				Value hexValue = find_value(resultobj , "hex");
 				if (complete == true) {
-					Value hexValue = find_value(resultobj , "hex");
 
 					if (hexValue.type() == null_type)
 					{
@@ -284,13 +283,13 @@ void SendCoinsDialog::on_sendButton_clicked()
 					Value callrpc = CallRPC1(string("sendrawtransaction ") + hex);
 				}else{
 					  QMessageBox::warning(this, "macoin",
-								QString::fromStdString("sending fail"),
+								QString::fromStdString("sending fail " + hexValue.get_str()),
 								QMessageBox::Ok, QMessageBox::Ok);
 				}
 
 			}catch(...){
 				QMessageBox::warning(this, "macoin",
-					QString::fromStdString("error"),
+					QString::fromStdString("some exception"),
 					QMessageBox::Ok, QMessageBox::Ok);
 
 			}

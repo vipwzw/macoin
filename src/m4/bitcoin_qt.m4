@@ -363,7 +363,7 @@ AC_DEFUN([_BITCOIN_QT_FIND_LIBS_WITHOUT_PKGCONFIG],[
     fi
   ])
 
-  .BITCOIN_QT_CHECK([
+  BITCOIN_QT_CHECK([
     LIBS=
     if test x$qt_lib_path != x; then
       LIBS="-L$qt_lib_path"

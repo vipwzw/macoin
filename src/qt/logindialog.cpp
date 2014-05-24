@@ -159,8 +159,7 @@ void LoginDialog::on_logoutButton_clicked()
 	ui->passwordLabel->setText("");
 	ui->frame2->setVisible(true);
 	ui->LogoutButton->setVisible(true);
-	OAuth2::clear()
-
+	OAuth2::clear();
 }
 void LoginDialog::on_subscriptButton_clicked()
 {
@@ -190,7 +189,13 @@ void LoginDialog::on_subscriptButton_clicked()
 		const string pubkey1 = "\"" + find_value(multiinfo, "pubkey1").get_str() + "\"";
 		const string pubkey2 = "\"" + find_value(multiinfo, "pubkey2").get_str() + "\"";
 		const string multiaddr = find_value(multiinfo, "addr").get_str();
-		const string multisigwallet = CallRPC(string("addmultisigaddress 2 ") + "["+pubkey1+","+pubkey2+"]" + " macoin_validate_wallet").get_str();
+		const Value multisigwallet = CallRPC(string("addmultisigaddress 2 ") + "["+pubkey1+","+pubkey2+"]" + " macoin_validate_wallet");
+		if(multisigwallet.type()  != str_type){
+  			  QMessageBox::warning(this, "macoin",
+					QString::fromStdString("add multisigaddress error "),
+					QMessageBox::Ok, QMessageBox::Ok);
+			return ;
+		}
 	}else{
 		ui->passwordLabel->setText("");
 		ui->frame2->setVisible(true);

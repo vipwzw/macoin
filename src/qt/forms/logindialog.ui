@@ -411,8 +411,10 @@
  </widget>
  <tabstops>
   <tabstop>usernameLabel</tabstop>
-  <tabstop>usernameLabel</tabstop>
+  <tabstop>passwordLabel</tabstop>
   <tabstop>loginButton</tabstop>
+  <tabstop>SubscriptButton</tabstop>
+  <tabstop>LogoutButton</tabstop>
  </tabstops>
  <resources>
   <include location="../bitcoin.qrc"/>

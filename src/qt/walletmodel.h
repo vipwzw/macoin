@@ -7,14 +7,14 @@
 
 #include "paymentrequestplus.h"
 #include "walletmodeltransaction.h"
-
+#include <QVariant>
 #include "allocators.h" /* for SecureString */
 
 #include <map>
 #include <vector>
 
 #include <QObject>
-
+#include <QThread>
 class AddressTableModel;
 class OptionsModel;
 class RecentRequestsTableModel;
@@ -94,6 +94,8 @@ public:
         }
     )
 };
+
+
 
 /** Interface to Macoin wallet from Qt view code. */
 class WalletModel : public QObject

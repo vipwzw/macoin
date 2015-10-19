@@ -26,8 +26,14 @@
       <enum>QFrame::Sunken</enum>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_3">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetFixedSize</enum>
+      </property>
       <item>
        <layout class="QGridLayout" name="gridLayout">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetFixedSize</enum>
+        </property>
         <item row="3" column="1">
          <layout class="QHBoxLayout" name="horizontalLayout">
           <item>
@@ -43,19 +49,26 @@
             </property>
             <property name="icon">
              <iconset resource="../bitcoin.qrc">
-              <normaloff>:/icons/receiving_addresses</normaloff>:/icons/receiving_addresses</iconset>
+              <normaloff>:/icons/login</normaloff>:/icons/login</iconset>
             </property>
            </widget>
           </item>
           <item>
-           <spacer name="horizontalSpacer">
+           <widget class="QLabel" name="label_Link">
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_1">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
-              <width>40</width>
-              <height>20</height>
+              <width>0</width>
+              <height>0</height>
              </size>
             </property>
            </spacer>
@@ -116,7 +129,7 @@
          </widget>
         </item>
         <item row="2" column="2">
-         <spacer name="horizontalSpacer">
+         <spacer name="horizontalSpacer_2">
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
@@ -150,16 +163,21 @@
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
        <layout class="QGridLayout" name="gridLayout_2">
-
         <item row="0" column="0">
-         <widget class="QLabel" name="title_label">
-         </widget>
+         <widget class="QLabel" name="title_label"/>
         </item>
-
         <item row="0" column="1">
          <widget class="QLabel" name="titleLabel">
+          <property name="font">
+           <font>
+            <family>Aharoni</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
           <property name="toolTip">
-           <string></string>
+           <string/>
           </property>
           <property name="text">
            <string>user info</string>
@@ -172,9 +190,16 @@
           </property>
          </widget>
         </item>
-
         <item row="0" column="2">
          <widget class="QLabel" name="addressbookLabel">
+          <property name="font">
+           <font>
+            <family>Aharoni</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
           <property name="toolTip">
            <string>addresses book</string>
           </property>
@@ -189,7 +214,6 @@
           </property>
          </widget>
         </item>
-
         <item row="1" column="0">
          <widget class="QLabel" name="label_uid">
           <property name="toolTip">
@@ -207,8 +231,7 @@
          </widget>
         </item>
         <item row="1" column="1">
-         <widget class="QLabel" name="UIDLabel">
-         </widget>
+         <widget class="QLabel" name="UIDLabel"/>
         </item>
         <item row="1" column="2">
          <widget class="QLabel" name="label_Address1">
@@ -216,14 +239,13 @@
            <string>Address.</string>
           </property>
           <property name="text">
-           <string></string>
+           <string/>
           </property>
           <property name="buddy">
            <cstring>addressLabel</cstring>
           </property>
          </widget>
         </item>
-
         <item row="2" column="0">
          <widget class="QLabel" name="label_phone">
           <property name="toolTip">
@@ -244,21 +266,19 @@
           </property>
          </widget>
         </item>
-
         <item row="2" column="2">
          <widget class="QLabel" name="label_Address2">
           <property name="toolTip">
            <string>Address.</string>
           </property>
           <property name="text">
-           <string></string>
+           <string/>
           </property>
           <property name="buddy">
            <cstring>addressLabel</cstring>
           </property>
          </widget>
         </item>
-
         <item row="3" column="0">
          <widget class="QLabel" name="label_status">
           <property name="text">
@@ -282,16 +302,15 @@
            <string>Address</string>
           </property>
           <property name="text">
-           <string></string>
+           <string/>
           </property>
           <property name="buddy">
            <cstring>addressLabel</cstring>
           </property>
          </widget>
         </item>
-
         <item row="4" column="2">
-         <spacer name="horizontalSpacer">
+         <spacer name="horizontalSpacer_3">
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
@@ -326,8 +345,13 @@
           </property>
          </widget>
         </item>
-
-        <item row="5" column="1">
+        <item row="5" column="0">
+         <widget class="QLabel" name="blank_label1"/>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="blank_label2"/>
+        </item>
+        <item row="7" column="1">
          <layout class="QHBoxLayout" name="horizontalLayout_2">
           <item>
            <widget class="QPushButton" name="SubscriptButton">
@@ -342,13 +366,12 @@
             </property>
             <property name="icon">
              <iconset resource="../bitcoin.qrc">
-              <normaloff>:/icons/receiving_addresses</normaloff>:/icons/receiving_addresses</iconset>
+              <normaloff>:/icons/wallet</normaloff>:/icons/wallet</iconset>
             </property>
            </widget>
           </item>
-
-         <item>
-            <spacer name="horizontalSpacer">
+          <item>
+           <spacer name="horizontalSpacer_4">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -362,8 +385,7 @@
           </item>
          </layout>
         </item>
-
-        <item row="5" column="2">
+        <item row="7" column="2">
          <layout class="QHBoxLayout" name="horizontalLayout_3">
           <item>
            <widget class="QPushButton" name="LogoutButton">
@@ -378,13 +400,12 @@
             </property>
             <property name="icon">
              <iconset resource="../bitcoin.qrc">
-              <normaloff>:/icons/receiving_addresses</normaloff>:/icons/receiving_addresses</iconset>
+              <normaloff>:/icons/logoff</normaloff>:/icons/logoff</iconset>
             </property>
            </widget>
           </item>
-
-         <item>
-            <spacer name="horizontalSpacer">
+          <item>
+           <spacer name="horizontalSpacer_5">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -398,12 +419,11 @@
           </item>
          </layout>
         </item>
-
-	   </layout>
+        <item row="8" column="0">
+         <widget class="QLabel" name="blank_label3"/>
+        </item>
+       </layout>
       </item>
-
-
-
      </layout>
     </widget>
    </item>

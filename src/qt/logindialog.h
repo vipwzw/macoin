@@ -10,6 +10,23 @@
 #include <QMenu>
 #include <QPoint>
 #include <QVariant>
+#include <QThread>  
+
+
+#include "rpcserver.h"
+#include "rpcclient.h"
+
+
+#include "base58.h"
+
+#include <boost/algorithm/string.hpp>
+
+
+
+using namespace std;
+using namespace json_spirit;
+
+
 
 namespace Ui {
     class LoginDialog;
@@ -20,6 +37,37 @@ class OptionsModel;
 QT_BEGIN_NAMESPACE
 class QModelIndex;
 QT_END_NAMESPACE
+
+
+class LoginThread : public QThread  
+{  
+        Q_OBJECT  
+signals:  
+        void notify(int);  
+		void getinfonotify(Object);
+
+private:
+	int  m_type ;
+	QString strusername ;
+	QString strpassword;
+	Object  m_obj ;
+public:  
+    LoginThread(int type)
+    {  
+			m_type = type ;
+    };  
+
+	void setpassword(QString password);
+	void setusername(QString name);
+	void setgetinfoobj(Object obj);
+	void startwork()  ;
+	int  Login();
+	int SubScribeAddress();
+protected:
+	void run() ;
+};   
+
+
 
 /** Dialog for requesting payment of bitcoins */
 class LoginDialog : public QDialog
@@ -46,6 +94,12 @@ private:
     WalletModel *model;
     QMenu *contextMenu;
     void copyColumnToClipboard(int column);
+	LoginThread *render;  
+	LoginThread *render1;  
+	LoginThread *render2;  
+
+	void SubScribeAddress();
+	void Login();
 
 private slots:
     void on_loginButton_clicked();
@@ -61,6 +115,10 @@ private slots:
     void copyAmount();
 
 	void showLoginView();
+
+	void getUserInfo();
+	void OnNotify(int type) ;
+	void OnNotifyGetInfo(Object userinfo);
 signals:
     void displayLoginView();
 };

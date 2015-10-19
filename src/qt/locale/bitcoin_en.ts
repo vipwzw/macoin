@@ -1921,112 +1921,137 @@ Address: %4
 <context>
     <name>LoginDialog</name>
     <message>
-        <location filename="../forms/logindialog.ui" line="+107"/>
-        <source>&amp;Amount:</source>
-        <translation type="unfinished"></translation>
+        <location filename="../forms/logindialog.ui" line="165"/>
+        <source>user info</source>
+        <translation>user info</translation>
+    </message>
+
+    <message>
+        <location line="+5"/>
+        <source>&amp;UserName:</source>
+        <translation>&amp;UserName:</translation>
     </message>
     <message>
-        <location line="-16"/>
-        <source>&amp;Label:</source>
-        <translation type="unfinished">&amp;Label:</translation>
+        <location line="+12"/>
+        <source>&amp;Login</source>
+        <translation>&amp;Login</translation>
+    </message>
+	
+    <message>
+        <location line="+6"/>
+        <source>&amp;Password:</source>
+        <translation>&amp;Password:</translation>
+    </message>
+
+    <message>
+        <location line="+8"/>
+        <source>username.</source>
+        <translation>username.</translation>
     </message>
     <message>
-        <location line="-37"/>
-        <source>&amp;Message:</source>
-        <translation type="unfinished"></translation>
+        <location line="+9"/>
+        <source>please input user name.</source>
+        <translation>please input user name.</translation>
     </message>
     <message>
-        <location line="-20"/>
-        <source>Reuse one of the previously used receiving addresses. Reusing addresses has security and privacy issues. Do not use this unless re-generating a payment request made before.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>R&amp;euse an existing receiving address (not recommended)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+14"/>
-        <location line="+23"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Macoin network.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-7"/>
-        <location line="+21"/>
-        <source>An optional label to associate with the new receiving address.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-7"/>
-        <source>Use this form to request payments. All fields are &lt;b&gt;optional&lt;/b&gt;.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+23"/>
-        <location line="+22"/>
-        <source>An optional amount to request. Leave this empty or zero to not request a specific amount.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+32"/>
-        <source>Clear all fields of the form.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Clear</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+78"/>
-        <source>Requested payments history</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="-98"/>
-        <source>&amp;Request payment</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+120"/>
-        <source>Show the selected request (does the same as double clicking an entry)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Show</source>
-        <translation type="unfinished"></translation>
+        <location line="+10"/>
+        <source>password.</source>
+        <translation>password.</translation>
     </message>
     <message>
         <location line="+11"/>
-        <source>Remove the selected entries from the list</source>
-        <translation type="unfinished"></translation>
+        <source>please input password.</source>
+        <translation>please input password.</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <location line="+9"/>
+        <source>username.</source>
+        <translation>username</translation>
     </message>
     <message>
-        <location filename="../receivecoinsdialog.cpp" line="+38"/>
-        <source>Copy label</source>
-        <translation type="unfinished">Copy label</translation>
+        <location line="182"/>
+        <source>address book</source>
+        <translation>address book</translation>
     </message>
     <message>
-        <location filename="../logindialog.cpp" line="+38"/>
-        <source>Copy label</source>
-        <translation type="unfinished">Copy label</translation>
+        <location line="182"/>
+        <source>address book</source>
+        <translation>address book</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Copy message</source>
-        <translation type="unfinished"></translation>
+        <location line="+14"/>
+        <source>UID:</source>
+        <translation>UID:</translation>
     </message>
     <message>
-        <location line="+1"/>
-        <source>Copy amount</source>
-        <translation type="unfinished">Copy amount</translation>
+        <location line="202"/>
+        <source>Phone:</source>
+        <translation>Phone:</translation>
+    </message>
+    <message>
+        <location line="222"/>
+        <source>status:</source>
+        <translation>status:</translation>
+    </message>
+    <message>
+        <location line="+16"/>
+        <source>Email:</source>
+        <translation>Email:</translation>
+    </message>
+    <message>
+        <location line="279"/>
+        <source>Address:</source>
+        <translation>Address:</translation>
+    </message>
+    <message>
+        <location line="332"/>
+        <source>&amp;Subscription</source>
+        <translation>&amp;Subscription</translation>
+    </message>
+    <message>
+        <location line="361"/>
+        <source>&amp;Logout</source>
+        <translation>&amp;Logout</translation>
+    </message>
+    <message>
+        <location filename="../logindialog.cpp" line="183"/>
+        <source>please login first or checking network!</source>
+        <translation>please login first or checking network!</translation>
+    </message>
+    <message>
+        <location filename="../logindialog.cpp" line="189"/>
+        <source>no more than three address or not login</source>
+        <translation>no more than three address or not login</translation>
+    </message>
+    <message>
+        <location filename="../logindialog.cpp" line="199"/>
+        <source>add multisigaddress error </source>
+        <translation>add multisigaddress error </translation>
+    </message>
+    <message>
+        <location filename="../logindialog.cpp" line="204"/>
+        <source>apply Success!</source>
+        <translation>apply Success!</translation>
+    </message>
+    <message>
+        <location filename="../logindialog.cpp" line="211"/>
+        <source>please login first!</source>
+        <translation>please login first!</translation>
+    </message>
+    <message>
+        <location filename="../logindialog.cpp" line="245"/>
+        <source>login server fail!</source>
+        <translation>login server fail!</translation>
+    </message>
+    <message>
+        <location filename="../logindialog.cpp" line="267"/>
+        <source>pass realname verify</source>
+        <translation>pass realname verify</translation>
+    </message>
+    <message>
+        <location filename="../logindialog.cpp" line="269"/>
+        <source>no pass realname verify</source>
+        <translation>no pass realname verify</translation>
     </message>
 </context>
 <context>

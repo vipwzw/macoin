@@ -354,7 +354,7 @@ This product includes software developed by the OpenSSL Project for use in the O
     <message>
         <location line="+28"/>
         <source>&amp;Usercenter</source>
-        <translation>用户中心(&amp;T)</translation>
+        <translation>用户中心(&amp;U)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -1550,6 +1550,11 @@ Address: %4
         <translation>&lt;b&gt;最近交易记录&lt;/b&gt;</translation>
     </message>
     <message>
+        <location filename="../overviewpage.cpp" line="126"/>
+        <source>&lt;a href = 'http://www.macoin.org'&gt;macoin&lt;/a&gt;</source>
+        <translation>&lt;a href = 'http://www.macoin.org'&gt;马币&lt;/a&gt;</translation>
+    </message>
+    <message>
         <location filename="../overviewpage.cpp" line="+120"/>
         <location line="+1"/>
         <source>out of sync</source>
@@ -1976,25 +1981,11 @@ Address: %4
 <context>
     <name>LoginDialog</name>
     <message>
-        <location filename="../forms/logindialog.ui" line="+83"/>
-        <source>&amp;Amount:</source>
-        <translation>总额(&amp;A)：</translation>
-    </message>
-    <message>
-        <location line="-13"/>
-        <source>&amp;Label:</source>
-        <translation>标签(&amp;L)：</translation>
-    </message>
-    <message>
-        <location line="165"/>
+        <location filename="../forms/logindialog.ui" line="165"/>
         <source>user info</source>
         <translation>用户基本信息</translation>
     </message>
-    <message>
-        <location line="-34"/>
-        <source>&amp;Message:</source>
-        <translation>消息(&amp;M)：</translation>
-    </message>
+
     <message>
         <location line="+5"/>
         <source>&amp;UserName:</source>
@@ -2083,74 +2074,49 @@ Address: %4
         <translation>登出</translation>
     </message>
     <message>
-        <location line="-17"/>
-        <source>Reuse one of the previously used receiving addresses. Reusing addresses has security and privacy issues. Do not use this unless re-generating a payment request made before.</source>
-        <translation>重复使用以前用过的接收地址。重用地址有安全和隐私方面的隐患。除非是为重复生成同一项支付请求，否则请不要这样做。</translation>
+        <location filename="../logindialog.cpp" line="77"/>
+        <source>&lt;a href = 'https://zc.macoin.org/user/findPass'&gt;forget password&lt;/a&gt;</source>
+        <translation>&lt;a href = 'https://zc.macoin.org/user/findPass'&gt;忘记密码?&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>R&amp;euse an existing receiving address (not recommended)</source>
-        <translation>重用现有的接收地址（不推荐）</translation>
+        <location filename="../logindialog.cpp" line="183"/>
+        <source>please login first or checking network!</source>
+        <translation>请先登陆或检查网络连接!</translation>
     </message>
     <message>
-        <location line="+27"/>
-        <source>An optional label to associate with the new receiving address</source>
-        <translation>与新接收地址相关的标签，可选</translation>
+        <location filename="../logindialog.cpp" line="189"/>
+        <source>no more than three address or not login</source>
+        <translation>申请最多3个实名地址!</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Macoin network.</source>
-        <translation type="unfinished"/>
+        <location filename="../logindialog.cpp" line="199"/>
+        <source>add multisigaddress error </source>
+        <translation>添加多重签名失败!</translation>
     </message>
     <message>
-        <location line="+7"/>
-        <source>Use this form to request payments. All fields are &lt;b&gt;optional&lt;/b&gt;.</source>
-        <translation>使用此表单要求付款。所有字段都是&lt;b&gt;可选&lt;/b&gt;。</translation>
+        <location filename="../logindialog.cpp" line="204"/>
+        <source>apply Success!</source>
+        <translation>申请成功!</translation>
     </message>
     <message>
-        <location line="+39"/>
-        <source>An optional amount to request. Leave this empty or zero to not request a specific amount.</source>
-        <translation>可选的请求金额。留空或填零为不要求具体金额。</translation>
+        <location filename="../logindialog.cpp" line="211"/>
+        <source>please login first!</source>
+        <translation>请先登陆!</translation>
     </message>
     <message>
-        <location line="+17"/>
-        <source>Clear all fields of the form.</source>
-        <translation>清空此表单的所有字段。</translation>
+        <location filename="../logindialog.cpp" line="245"/>
+        <source>login server fail!</source>
+        <translation>登录服务器失败!</translation>
     </message>
     <message>
-        <location line="+3"/>
-        <source>Clear</source>
-        <translation>清除</translation>
+        <location filename="../logindialog.cpp" line="267"/>
+        <source>pass realname verify</source>
+        <translation>通过实名认证</translation>
     </message>
     <message>
-        <location line="+36"/>
-        <source>&amp;Request payment</source>
-        <translation>请求付款(&amp;R)</translation>
-    </message>
-    <message>
-        <location line="+47"/>
-        <source>Requested payments</source>
-        <translation>已请求支付</translation>
-    </message>
-    <message>
-        <location line="+16"/>
-        <source>Show the selected request (does the same as double clicking an entry)</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Show</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+11"/>
-        <source>Remove the selected entries from the list</source>
-        <translation type="unfinished"/>
-    </message>
-    <message>
-        <location line="+3"/>
-        <source>Remove</source>
-        <translation>移除</translation>
+        <location filename="../logindialog.cpp" line="269"/>
+        <source>no pass realname verify</source>
+        <translation>没有通过实名认证</translation>
     </message>
 </context>
 <context>
@@ -2373,11 +2339,7 @@ Address: %4
         <source>S&amp;end</source>
         <translation>发送(&amp;E)</translation>
     </message>
-    <message>
-        <location filename="../sendcoinsdialog.cpp" line="-228"/>
-        <source>Confirm send coins</source>
-        <translation>确认发送货币</translation>
-    </message>
+
     <message>
         <location line="-74"/>
         <location line="+5"/>
@@ -2511,6 +2473,26 @@ Address: %4
         <source>Invalid payment address %1</source>
         <translation>无效的付款地址 %1</translation>
     </message>
+    <message>
+        <location filename="../sendcoinsdialog.cpp" line="-228"/>
+        <source>Confirm send coins</source>
+        <translation>确认发送货币</translation>
+    </message>
+    <message>
+        <location filename="../sendcoinsdialog.cpp" line="286"/>
+        <source>sending fail </source>
+        <translation>发送马币失败</translation>
+    </message>
+    <message>
+        <location filename="../sendcoinsdialog.cpp" line="292"/>
+        <source>some exception</source>
+        <translation>发送马币异常</translation>
+    </message>
+    <message>
+        <location filename="../sendcoinsdialog.cpp" line="301"/>
+        <source>please login first!</source>
+        <translation>请先登录!</translation>
+    </message>
 </context>
 <context>
     <name>SendCoinsEntry</name>
@@ -2547,15 +2529,15 @@ Address: %4
         <translation>验证码:</translation>
     </message>
     <message>
-        <location line="+61"/>
+        <location line="168"/>
         <source>SMS check code</source>
-        <translation>短信校验码</translation>
+        <translation>请输入短信校验码</translation>
     </message>
 	
     <message>
-        <location line="+62"/>
+	    <location filename="../forms/sendcoinsentry.ui" line="184"/>
         <source>SMS Check</source>
-        <translation>短信验证</translation>
+        <translation>获取验证码</translation>
     </message>
 
     <message>
@@ -2631,6 +2613,16 @@ Address: %4
         <location filename="../sendcoinsentry.cpp" line="+1"/>
         <source>Enter a Macoin address (e.g. 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L)</source>
         <translation>请输入马币地址（例如: 1NS17iag9jJgTHD1VXjvLCEnZuQ3rJDE9L）</translation>
+    </message>
+    <message>
+        <location filename="../sendcoinsentry.cpp" line="132"/>
+        <source>sms sending complete!</source>
+        <translation>验证请求发送完成!</translation>
+    </message>
+    <message>
+        <location filename="../sendcoinsentry.cpp" line="149"/>
+        <source>please login first!</source>
+        <translation>请先登录!</translation>
     </message>
 </context>
 <context>

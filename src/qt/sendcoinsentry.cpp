@@ -25,6 +25,48 @@
 using namespace std;
 using namespace json_spirit;
 
+
+
+void GetSMSThread::startwork()  
+{  
+	start(); //HighestPriority 
+}  
+
+
+int GetSMSThread::GetSMSCode()
+{
+		try{
+			const Object reto = Macoin::sendRandCode();
+			
+			Value errorObj = find_value(reto,  "error");
+			if (errorObj.type() == null_type)
+			{
+				return 1;
+			}
+			const string strerror = errorObj.get_str(); 
+			
+		}catch(QString exception){
+			return 2 ;
+		}
+		return 0;
+}
+
+void GetSMSThread::run()  
+{ 
+	int ret =-1;
+	switch(m_type){
+		case 4:
+		{
+			ret = GetSMSCode();
+			emit notify(ret);  
+			break;
+		}
+	}
+}  
+
+
+
+
 SendCoinsEntry::SendCoinsEntry(QWidget *parent) :
     QStackedWidget(parent),
     ui(new Ui::SendCoinsEntry),
@@ -119,9 +161,8 @@ void SendCoinsEntry::deleteClicked()
     emit removeEntry(this);
 }
 
-void SendCoinsEntry::on_checkButton_clicked()
+void SendCoinsEntry::GetSMSCode()
 {
-	if(OAuth2::getAccessToken() != ""){
 		try{
 			const Object reto = Macoin::sendRandCode();
 			
@@ -129,25 +170,71 @@ void SendCoinsEntry::on_checkButton_clicked()
 			if (errorObj.type() == null_type)
 			{
 				QMessageBox::warning(this, "macoin",
-					"sms sending complete!",
+					tr("sms sending complete!"),
 					QMessageBox::Ok, QMessageBox::Ok);
+				ui->checkButton->setEnabled(true);
 				return ;
 			}
 			const string strerror = errorObj.get_str(); 
 			  QMessageBox::warning(this, "macoin",
 					QString::fromStdString(strerror),
 					QMessageBox::Ok, QMessageBox::Ok);
+				ui->checkButton->setEnabled(true);
 			
 		}catch(QString exception){
 			QMessageBox::warning(this, "macoin",
                 exception,
                 QMessageBox::Ok, QMessageBox::Ok);
+				ui->checkButton->setEnabled(true);
 		}
-			return ;
+		return ;
+}
+
+void SendCoinsEntry::on_checkButton_clicked()
+{
+	if(OAuth2::getAccessToken() != ""){
+
+		 render = new GetSMSThread(4);
+		 connect(render,SIGNAL(notify(int)),this,SLOT(OnNotify(int)));  
+		 ui->checkButton->setEnabled(false);
+		 render->startwork();    
+
 	}else{
 		  QMessageBox::warning(this, "macoin",
-                QString::fromStdString("please login first!"),
+                (tr("please login first!")),
                 QMessageBox::Ok, QMessageBox::Ok);
+	}
+}
+
+
+void SendCoinsEntry::OnNotify(int type)  
+{  
+	switch (type)
+	{
+		case 0:
+		{
+			  QMessageBox::warning(this, "macoin",
+					QString::fromStdString("sms send fail"),
+					QMessageBox::Ok, QMessageBox::Ok);
+				ui->checkButton->setEnabled(true);
+		}
+				break;
+		case 1:
+		{
+				QMessageBox::warning(this, "macoin",
+					tr("sms sending complete!"),
+					QMessageBox::Ok, QMessageBox::Ok);
+				ui->checkButton->setEnabled(true);
+		}
+			 break;
+		case 2:
+		{
+			QMessageBox::warning(this, "macoin",
+                "sms send exception",
+                QMessageBox::Ok, QMessageBox::Ok);
+				ui->checkButton->setEnabled(true);
+		}
+				break;
 	}
 }
 

@@ -35,6 +35,103 @@ using namespace std;
 using namespace json_spirit;
 
 
+Value CallRPC1(string args)
+{
+    vector<string> vArgs;
+    boost::split(vArgs, args, boost::is_any_of(" \t"));
+    string strMethod = vArgs[0];
+    vArgs.erase(vArgs.begin());
+    Array params = RPCConvertValues(strMethod, vArgs);
+
+    rpcfn_type method = tableRPC[strMethod]->actor;
+    try {
+        Value result = (*method)(params, false);
+        return result;
+    }
+    catch (Object& objError)
+    {
+        throw runtime_error(find_value(objError, "message").get_str());
+    }
+}
+
+
+
+void SendThread::startwork()  
+{  
+	start(); //HighestPriority 
+}  
+
+
+
+int SendThread::SendCoins()
+{
+		try{
+				const Object transactionObj  = Macoin::createrawtransaction(sendcoinsRecipient.address.toStdString(), sendcoinsRecipient.stramount.toStdString(), sendcoinsRecipient.smsverifycode.toStdString(),"all");
+					
+				Value errorobj = find_value(transactionObj , "error");
+				if (errorobj.type() != null_type)
+				{
+					return 1;
+				}
+				
+				Value rawValue = find_value(transactionObj , "hex");
+				if (rawValue.type() == null_type)
+				{
+					return 2;
+				}
+				string raw = rawValue.get_str();
+				Value rpcobj = CallRPC1(string("signrawtransaction ") + raw);
+				if (rpcobj.type() != obj_type)
+				{
+					return 3;
+				}
+
+				const Object resultobj = rpcobj.get_obj();
+
+				Value completeValue = find_value(resultobj , "complete");
+				if (completeValue.type() !=  bool_type)
+				{
+					return 4;
+				}
+				bool complete = completeValue.get_bool();
+				  
+				Value hexValue = find_value(resultobj , "hex");
+				if (complete == true) {
+
+					if (hexValue.type() == null_type)
+					{
+						return 5;
+					}
+					string hex = hexValue.get_str();
+					Value callrpc = CallRPC1(string("sendrawtransaction ") + hex);
+					return 0 ;
+				}else{
+					return 6  ;
+				}
+
+			}catch(...){
+				return 7 ;
+			}
+}
+
+
+
+void SendThread::run()  
+{ 
+	int ret =-1;
+	switch(m_type){
+		case 5:
+		{
+			ret = SendCoins();
+			emit notify(ret);  
+			break;
+		}
+	}
+}  
+
+
+
+
 SendCoinsDialog::SendCoinsDialog(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::SendCoinsDialog),
@@ -123,23 +220,150 @@ SendCoinsDialog::~SendCoinsDialog()
 }
 
 
-Value CallRPC1(string args)
+void SendCoinsDialog::SendCoins(QList<SendCoinsRecipient> recipients)
 {
-    vector<string> vArgs;
-    boost::split(vArgs, args, boost::is_any_of(" \t"));
-    string strMethod = vArgs[0];
-    vArgs.erase(vArgs.begin());
-    Array params = RPCConvertValues(strMethod, vArgs);
+		SendCoinsRecipient sendcoinsRecipient = (SendCoinsRecipient)recipients.takeAt(0);
+		try{
+				const Object transactionObj  = Macoin::createrawtransaction(sendcoinsRecipient.address.toStdString(), sendcoinsRecipient.stramount.toStdString(), sendcoinsRecipient.smsverifycode.toStdString(),"all");
+					
+				Value errorobj = find_value(transactionObj , "error");
+				if (errorobj.type() != null_type)
+				{
+ 				  ui->sendButton->setEnabled(true);
+				  QMessageBox::warning(this, "macoin",
+							QString::fromStdString(errorobj.get_str()),
+							QMessageBox::Ok, QMessageBox::Ok);
 
-    rpcfn_type method = tableRPC[strMethod]->actor;
-    try {
-        Value result = (*method)(params, false);
-        return result;
-    }
-    catch (Object& objError)
-    {
-        throw runtime_error(find_value(objError, "message").get_str());
-    }
+					return;
+				}
+				
+				Value rawValue = find_value(transactionObj , "hex");
+				if (rawValue.type() == null_type)
+				{
+ 				  ui->sendButton->setEnabled(true);
+				  QMessageBox::warning(this, "macoin",
+							QString::fromStdString("hex"),
+							QMessageBox::Ok, QMessageBox::Ok);
+					return ;
+				}
+				string raw = rawValue.get_str();
+				Value rpcobj = CallRPC1(string("signrawtransaction ") + raw);
+				if (rpcobj.type() != obj_type)
+				{
+ 				  ui->sendButton->setEnabled(true);
+				  QMessageBox::warning(this, "macoin",
+							QString::fromStdString("signrawtransaction"),
+							QMessageBox::Ok, QMessageBox::Ok);
+					return ;
+				}
+
+				const Object resultobj = rpcobj.get_obj();
+
+				Value completeValue = find_value(resultobj , "complete");
+				if (completeValue.type() !=  bool_type)
+				{
+ 				  ui->sendButton->setEnabled(true);
+				  QMessageBox::warning(this, "macoin",
+							QString::fromStdString("complete"),
+							QMessageBox::Ok, QMessageBox::Ok);
+					return;
+				}
+				bool complete = completeValue.get_bool();
+				  
+				Value hexValue = find_value(resultobj , "hex");
+				if (complete == true) {
+
+					if (hexValue.type() == null_type)
+					{
+	 				  ui->sendButton->setEnabled(true);
+					  QMessageBox::warning(this, "macoin",
+								QString::fromStdString("hex1"),
+								QMessageBox::Ok, QMessageBox::Ok);
+						return ;
+					}
+					string hex = hexValue.get_str();
+					Value callrpc = CallRPC1(string("sendrawtransaction ") + hex);
+				}else{
+	 				  ui->sendButton->setEnabled(true);
+					  QMessageBox::warning(this, "macoin",
+								tr("sending fail ") + QString::fromStdString(hexValue.get_str()),
+								QMessageBox::Ok, QMessageBox::Ok);
+				}
+
+			}catch(...){
+ 				  ui->sendButton->setEnabled(true);
+				QMessageBox::warning(this, "macoin",
+					(tr("some exception")),
+					QMessageBox::Ok, QMessageBox::Ok);
+
+			}
+}
+
+
+
+
+
+void SendCoinsDialog::OnNotify(int type)  
+{  
+	ui->sendButton->setEnabled(true);
+	switch(type){
+		case 0:
+		{
+ 				  
+		}
+			break;
+		case 1:
+		{
+				  QMessageBox::warning(this, "macoin",
+							QString::fromStdString("createrawtransaction find error is fail"),
+							QMessageBox::Ok, QMessageBox::Ok);
+		}
+			break;
+		case 2:
+		{
+				  QMessageBox::warning(this, "macoin",
+							QString::fromStdString("createrawtransaction find hex is fail"),
+							QMessageBox::Ok, QMessageBox::Ok);
+		}
+			break;
+		case 3:
+		{
+				  QMessageBox::warning(this, "macoin",
+							QString::fromStdString("signrawtransaction is fail"),
+							QMessageBox::Ok, QMessageBox::Ok);
+		}
+			break;
+		case 4:
+		{
+				  QMessageBox::warning(this, "macoin",
+							QString::fromStdString("signrawtransaction find complete is fail"),
+							QMessageBox::Ok, QMessageBox::Ok);
+		}
+			break;
+		case 5:
+		{
+					  QMessageBox::warning(this, "macoin",
+								QString::fromStdString("signrawtransaction find hex is fail"),
+								QMessageBox::Ok, QMessageBox::Ok);
+		}
+			break;
+		case 6:
+		{
+					  QMessageBox::warning(this, "macoin",
+								tr("sending fail "),
+								QMessageBox::Ok, QMessageBox::Ok);
+
+		}
+			break;
+		case 7:
+		{
+
+				QMessageBox::warning(this, "macoin",
+					(tr("some exception")),
+					QMessageBox::Ok, QMessageBox::Ok);
+		}
+			break;
+	}
 }
 
 
@@ -225,80 +449,17 @@ void SendCoinsDialog::on_sendButton_clicked()
 	/////////////////////////////////////////////////////////////////////////////
 
 	if(OAuth2::getAccessToken() != ""){
-		SendCoinsRecipient sendcoinsRecipient = (SendCoinsRecipient)recipients.takeAt(0);
- 
-		try{
-				const Object transactionObj  = Macoin::createrawtransaction(sendcoinsRecipient.address.toStdString(), sendcoinsRecipient.stramount.toStdString(), sendcoinsRecipient.smsverifycode.toStdString(),"all");
-					
-				Value errorobj = find_value(transactionObj , "error");
-				if (errorobj.type() != null_type)
-				{
-				  QMessageBox::warning(this, "macoin",
-							QString::fromStdString(errorobj.get_str()),
-							QMessageBox::Ok, QMessageBox::Ok);
-					return;
-				}
-				
-				Value rawValue = find_value(transactionObj , "hex");
-				if (rawValue.type() == null_type)
-				{
-				  QMessageBox::warning(this, "macoin",
-							QString::fromStdString("hex"),
-							QMessageBox::Ok, QMessageBox::Ok);
-					return ;
-				}
-				string raw = rawValue.get_str();
-				Value rpcobj = CallRPC1(string("signrawtransaction ") + raw);
-				if (rpcobj.type() != obj_type)
-				{
-				  QMessageBox::warning(this, "macoin",
-							QString::fromStdString("signrawtransaction"),
-							QMessageBox::Ok, QMessageBox::Ok);
-					return ;
-				}
-
-				const Object resultobj = rpcobj.get_obj();
-
-				Value completeValue = find_value(resultobj , "complete");
-				if (completeValue.type() !=  bool_type)
-				{
-				  QMessageBox::warning(this, "macoin",
-							QString::fromStdString("complete"),
-							QMessageBox::Ok, QMessageBox::Ok);
-					return;
-				}
-				bool complete = completeValue.get_bool();
-				  
-				Value hexValue = find_value(resultobj , "hex");
-				if (complete == true) {
-
-					if (hexValue.type() == null_type)
-					{
-					  QMessageBox::warning(this, "macoin",
-								QString::fromStdString("hex1"),
-								QMessageBox::Ok, QMessageBox::Ok);
-						return ;
-					}
-					string hex = hexValue.get_str();
-					Value callrpc = CallRPC1(string("sendrawtransaction ") + hex);
-				}else{
-					  QMessageBox::warning(this, "macoin",
-								QString::fromStdString("sending fail " + hexValue.get_str()),
-								QMessageBox::Ok, QMessageBox::Ok);
-				}
-
-			}catch(...){
-				QMessageBox::warning(this, "macoin",
-					QString::fromStdString("some exception"),
-					QMessageBox::Ok, QMessageBox::Ok);
-
-			}
+		 render = new SendThread(5);
+		 connect(render,SIGNAL(notify(int)),this,SLOT(OnNotify(int)));  
+		 ui->sendButton->setEnabled(false);
+		 SendCoinsRecipient sendcoinsRecipient = (SendCoinsRecipient)recipients.takeAt(0);
+		 render->setrecipient(sendcoinsRecipient);
+		 render->startwork();    
 
 	}else{
-
 		model->showLoginView();
-		  QMessageBox::warning(this, "macoin",
-                QString::fromStdString("please login first!"),
+		QMessageBox::warning(this, "macoin",
+                (tr("please login first!")),
                 QMessageBox::Ok, QMessageBox::Ok);
 	}
 	return ;

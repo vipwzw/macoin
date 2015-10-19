@@ -15,6 +15,28 @@ namespace Ui {
     class SendCoinsEntry;
 }
 
+class GetSMSThread : public QThread  
+{  
+        Q_OBJECT  
+signals:  
+        void notify(int);  
+
+private:
+	int  m_type ;
+public:  
+    GetSMSThread(int type)
+    {  
+			m_type = type ;
+    };  
+
+	void startwork()  ;
+	int GetSMSCode();
+
+protected:
+	void run() ;
+};   
+
+
 /**
  * A single entry in the dialog for sending macoins.
  * Stacked widget, with different UIs for payment requests
@@ -60,12 +82,16 @@ private slots:
     void updateDisplayUnit();
 	void on_checkButton_clicked();
 
+	void OnNotify(int type) ;
+
 private:
     SendCoinsRecipient recipient;
     Ui::SendCoinsEntry *ui;
     WalletModel *model;
-
+	GetSMSThread *render ;
     bool updateLabel(const QString &address);
+
+	void GetSMSCode();
 };
 
 #endif // SENDCOINSENTRY_H

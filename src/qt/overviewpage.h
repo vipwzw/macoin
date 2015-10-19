@@ -11,6 +11,7 @@ class ClientModel;
 class TransactionFilterProxy;
 class TxViewDelegate;
 class WalletModel;
+#include <QMovie>
 
 namespace Ui {
     class OverviewPage;
@@ -40,6 +41,7 @@ signals:
     void transactionClicked(const QModelIndex &index);
 
 private:
+	QMovie *movie ;
     Ui::OverviewPage *ui;
     ClientModel *clientModel;
     WalletModel *walletModel;

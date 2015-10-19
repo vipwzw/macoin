@@ -248,7 +248,7 @@ void BitcoinGUI::createActions(bool fIsTestnet)
     tabGroup->addAction(historyAction);
 
 
-    loginAction = new QAction(QIcon(":/icons/receiving_addresses"), tr("&Usercenter"), this);
+    loginAction = new QAction(QIcon(":/icons/usercenter"), tr("&Usercenter"), this);
     loginAction->setStatusTip(tr("user center"));
     loginAction->setToolTip(loginAction->statusTip());
     loginAction->setCheckable(true);

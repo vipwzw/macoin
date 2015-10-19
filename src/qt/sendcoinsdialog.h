@@ -21,6 +21,35 @@ QT_END_NAMESPACE
 namespace Ui {
     class SendCoinsDialog;
 }
+ 
+
+class SendThread : public QThread  
+{  
+        Q_OBJECT  
+signals:  
+        void notify(int);  
+
+private:
+	int  m_type ;
+    SendCoinsRecipient sendcoinsRecipient;
+public:  
+    SendThread(int type)
+    {  
+			m_type = type ;
+    };  
+
+	void setrecipient(SendCoinsRecipient recipient){
+		sendcoinsRecipient = recipient ;
+	};
+
+	void startwork()  ;
+	int SendCoins();
+ 
+
+protected:
+	void run() ;
+};   
+
 
 /** Dialog for sending bitcoins */
 class SendCoinsDialog : public QDialog
@@ -58,6 +87,9 @@ private:
     // of a message and message flags for use in emit message().
     // Additional parameter msgArg can be used via .arg(msgArg).
     void processSendCoinsReturn(const WalletModel::SendCoinsReturn &sendCoinsReturn, const QString &msgArg = QString());
+	
+	SendThread *render;  
+	void SendCoins(QList<SendCoinsRecipient> recipients);
 
 private slots:
     void on_sendButton_clicked();
@@ -76,6 +108,8 @@ private slots:
     void coinControlClipboardPriority();
     void coinControlClipboardLowOutput();
     void coinControlClipboardChange();
+
+	void OnNotify(int type)  ;
 
 signals:
     // Fired when a message should be reported to the user

@@ -33,7 +33,7 @@ public:
         vAlertPubKey = ParseHex("04fc9702847840aaf195de8442ebecedf5b095cdbb9bc716bda9110971b28a49e0ead8564ff0db22209e0374782c093bb899692d524e9d6a6956e7c5ecbcd68284");
         nDefaultPort = 10998;
         nRPCPort = 10838;
-        bnProofOfWorkLimit = CBigNum(~uint256(0) >> 20);
+        bnProofOfWorkLimit = CBigNum(~uint256(0) >> 16);
         nSubsidyHalvingInterval = 210000;
 
         // Build the genesis block. Note that the output of the genesis coinbase cannot
@@ -65,9 +65,9 @@ public:
         assert(hashGenesisBlock == uint256("0x00000b75d032c3049bd2626a7fddefbd3ad31ff5a8e272655b4b2219177a34c2"));
         assert(genesis.hashMerkleRoot == uint256("0x9157c69ed21edc8515a8d176fe0a964448c72efae888c894e182fe2ebcb21ccf"));
 
-        vSeeds.push_back(CDNSSeedData("seed1", "seed21.macoin.org"));
-        vSeeds.push_back(CDNSSeedData("seed2", "seed22.macoin.org"));
-        vSeeds.push_back(CDNSSeedData("seed3", "seed23.macoin.org"));
+        vSeeds.push_back(CDNSSeedData("seed1", "seedt1.bityuan.com"));
+        vSeeds.push_back(CDNSSeedData("seed2", "seedt2.bityuan.com"));
+        vSeeds.push_back(CDNSSeedData("seed3", "seedt3.bityuan.com"));
 
         base58Prefixes[PUBKEY_ADDRESS] = list_of(0);
         base58Prefixes[SCRIPT_ADDRESS] = list_of(5);

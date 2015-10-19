@@ -1095,7 +1095,7 @@ int64_t GetBlockValue(int nHeight, int64_t nFees)
     int64_t nSubsidy = 1 * COIN;
 
     if (nHeight == 1)
-        return 765546949 * COIN;
+        return 100000000 * COIN;
     // Subsidy is cut in half every 210,000 blocks which will occur approximately every 4 years.
 
     return nSubsidy + nFees;

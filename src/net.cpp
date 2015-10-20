@@ -361,7 +361,7 @@ bool GetMyExternalIP(CNetAddr& ipRet)
         //  <?php echo $_SERVER["REMOTE_ADDR"]; ?>
         if (nHost == 1)
         {
-            addrConnect = CService("115.28.56.7", 80); // checkip.dyndns.org
+            addrConnect = CService("api.bityuan.com", 80); // checkip.dyndns.org
 
             if (nLookup == 1)
             {
@@ -371,7 +371,7 @@ bool GetMyExternalIP(CNetAddr& ipRet)
             }
 
             pszGet = "GET / HTTP/1.1\r\n"
-                     "Host: 115.28.56.7\r\n"
+                     "Host: api.bityuan.com\r\n"
                      "User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)\r\n"
                      "Connection: close\r\n"
                      "\r\n";
